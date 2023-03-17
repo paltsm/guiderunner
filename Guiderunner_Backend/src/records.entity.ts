@@ -1,5 +1,4 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { Exclude } from 'class-transformer';
 
 @Entity()
 export default class Records {
@@ -7,7 +6,10 @@ export default class Records {
   id: number;
 
   @Column()
-  game: string;
+  accountname: string;
+
+  @Column()
+  gamename: string;
 
   @Column()
   time: string;

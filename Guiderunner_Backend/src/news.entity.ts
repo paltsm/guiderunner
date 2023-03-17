@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export default class Games {
+export default class News {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -9,20 +9,12 @@ export default class Games {
   gamename: string;
 
   @Column()
-  release: number;
+  date: Date;
 
   @Column()
-  category: string;
+  title: string;
 
   @Column()
-  platform: string;
-
-  @Column()
-  developer: string;
-
-  @Column()
-  description: string;
-
-  @Column()
-  image: string;
+  content: string;
+  
 }
