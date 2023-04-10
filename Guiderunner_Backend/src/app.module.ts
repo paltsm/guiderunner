@@ -6,6 +6,9 @@ import { AppService } from './app.service';
 import Games from './games.entity';
 import News from './news.entity';
 import Records from './records.entity';
+import Token from './auth/token.entity';
+import { AuthModule } from './auth/auth.module';
+import { PassportModule } from '@nestjs/passport';
 
 @Module({
   imports: [
@@ -15,9 +18,11 @@ import Records from './records.entity';
       username: 'root',
       password: '',
       database: 'guiderunner',
-      entities: [Account, Games, Records, News],
+      entities: [Account, Games, Records, News,Token],
       synchronize: true,
     }),
+    AuthModule,
+    PassportModule,
   ],
   controllers: [AppController],
   providers: [AppService],

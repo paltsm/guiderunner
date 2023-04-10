@@ -6,7 +6,7 @@ export default class Records {
   id: number;
 
   @Column()
-  accountname: string;
+  username: string;
 
   @Column()
   gamename: string;
@@ -22,4 +22,5 @@ export default class Records {
 
   @Column()
   youtubelink: string;
+
 }

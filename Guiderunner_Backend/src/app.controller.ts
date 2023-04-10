@@ -6,6 +6,8 @@ import {
   Param,
   Post,
   Render,
+  Request,
+  UseGuards,
 } from '@nestjs/common';
 import { DataSource } from 'typeorm';
 import Account from './accounts.entity';
@@ -17,6 +19,8 @@ import newNewsDto from './newNews.dto';
 import newRecordsDto from './newRecords.dto';
 import News from './news.entity';
 import Records from './records.entity';
+import { AuthGuard } from '@nestjs/passport/dist';
+import * as bcrypt from 'bcrypt';
 
 @Controller()
 export class AppController {
@@ -44,9 +48,15 @@ export class AppController {
   @Post('newaccount')
   async newAccount(@Body() account: newAccountDto) {
     const accountsRepo = this.dataSource.getRepository(Account);
+    const salt = await bcrypt.genSalt();
+    const hashPassword = await bcrypt.hash(account.password, salt);
+    account.password = hashPassword;
     accountsRepo.save(account);
+
     return account;
   }
+
+
   @Delete('accounts/:id')
   deleteAccount(@Param('id') id: number) {
     const accountsRepo = this.dataSource.getRepository(Account);
@@ -80,10 +90,10 @@ export class AppController {
   @Get('news')
   async listNews() {
     const newsRepo = this.dataSource.getRepository(News);
-    const [adat, darab] = await newsRepo
+    const [adat] = await newsRepo
       .createQueryBuilder()
       .getManyAndCount();
-    return { news: adat, count: darab };
+    return {news: adat };
   }
   @Post('newnews')
   async newNews(@Body() news: newNewsDto) {
@@ -105,4 +115,18 @@ export class AppController {
     gamesRepo.save(games);
     return games;
   }
+
+//login
+  @UseGuards(AuthGuard('bearer'))
+  @Get('profile')
+  OwnProfile(@Request() req){
+    const account: Account = req.account;
+    return{
+      username:account.username,
+      email:account.email,
+      
+    }
+  }
 }
+
+

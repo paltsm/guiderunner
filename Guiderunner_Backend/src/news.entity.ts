@@ -9,12 +9,17 @@ export default class News {
   gamename: string;
 
   @Column()
-  date: Date;
-
-  @Column()
   title: string;
 
   @Column()
   content: string;
-  
+
+  @Column()//oldal forrás
+  source: string;
+
+  @Column()
+  date: Date;
+
+ 
 }
+

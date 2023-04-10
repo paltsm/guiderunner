@@ -6,11 +6,11 @@ export default class Account {
   id: number;
 
   @Column()
-  accountname: string;
-
-  @Column()
-  password: string;
+  username: string;
 
   @Column()
   email: string;
+
+  @Column()
+  password: string;
 }
