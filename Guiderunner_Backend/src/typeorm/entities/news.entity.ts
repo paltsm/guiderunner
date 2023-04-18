@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+@Entity({name:'news'})
 export default class News {
   @PrimaryGeneratedColumn()
   id: number;
@@ -14,12 +14,11 @@ export default class News {
   @Column()
   content: string;
 
-  @Column()//oldal forrás
+  @Column()
   source: string;
 
   @Column()
-  date: Date;
+  date: string;
 
  
 }
-

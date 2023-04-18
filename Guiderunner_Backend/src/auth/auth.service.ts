@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import Account from 'src/accounts.entity';
+import { Account } from 'src/typeorm/entities/account.entity';
 import * as crypto from 'crypto';
 import Token from './token.entity';
 import { DataSource } from 'typeorm';
@@ -31,5 +31,13 @@ constructor(private datasource: DataSource){}
         
         return tokenString;
     }
-
-}
+    async logout(token) {
+    const tokenRepo = this.datasource.getRepository(Token);
+        const tokenObj = await tokenRepo.findOne({where: {token},
+        relations : {account: true}
+        });
+        await tokenRepo.delete(tokenObj)
+        
+    }
+        
+}   

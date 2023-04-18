@@ -1,4 +1,4 @@
-import Account from "src/accounts.entity";
+import { Account } from "src/typeorm/entities/account.entity";
 import { Entity, ManyToOne, PrimaryColumn } from "typeorm";
 
 @Entity()

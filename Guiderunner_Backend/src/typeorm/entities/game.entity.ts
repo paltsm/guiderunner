@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
-export default class Games {
+@Entity({name : 'games'})
+export default class Game {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -12,7 +12,7 @@ export default class Games {
   release: number;
 
   @Column()
-  category: string;
+  genre: string;
 
   @Column()
   platform: string;

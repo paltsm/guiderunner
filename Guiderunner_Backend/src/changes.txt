@@ -1,31 +1,41 @@
+
 - 2023.03.21 -
-accountname changed to username
-added 'source' column to news
-acconts.entity.ts and newAcccount.dto.ts/password,email column order changed to email,password 
+    accountname changed to username
+    added 'source' column to news
+    acconts.entity.ts and newAcccount.dto.ts/password,email column order changed to email,password 
 --------------
 
 - 2023.03.23 -
-used commands: 
-    npm i --save-dev @types/passport-local
-    npm i --save  passport passport-http-bearer
-    npm i --save @nestjs/passport
+    used commands: 
+        npm i --save-dev @types/passport-local
+        npm i --save  passport passport-http-bearer
+        npm i --save @nestjs/passport
 
-auth folder added
-    files added:
-        auth.controller.spec.ts
-        auth.controller.ts
-        auth.module.ts
-        auth.service.spec.ts
-        auth.service.ts
-        login.dto.ts
-        token.entity.ts
-        token.strategy.ts
-token table added
-app.controller.ts -> profile(login lekérdezés?)
-app.module.ts -> imports -> AuthModule,PassportModule,
+    auth folder added
+        files added:
+            auth.controller.spec.ts
+            auth.controller.ts
+            auth.module.ts
+            auth.service.spec.ts
+            auth.service.ts
+            login.dto.ts
+            token.entity.ts
+            token.strategy.ts
+    token table added
+    app.controller.ts -> profile(login lekérdezés?)
+    app.module.ts -> imports -> AuthModule,PassportModule,
 
 
-Post newAcccount
-    hashed password :3
+    Post newAcccount
+        hashed password method
 --------------
+
+- 2023.04.11 -
+    outsourcing methods to a separate folders
+    working logout
+
+- 2023.04.18 -
+    dto validations upadated
+    get by id method added
+    game category changed to genre
 
