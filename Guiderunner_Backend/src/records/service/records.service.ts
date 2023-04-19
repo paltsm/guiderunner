@@ -10,6 +10,7 @@ export class RecordsService {
     constructor(@InjectRepository(Records)
     private recordRepository:Repository<Records>,
     private dataSource: DataSource){}
+    
     async findRecords(){
         return {records : await this.dataSource.getRepository(Records).find()};
     }

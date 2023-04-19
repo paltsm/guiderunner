@@ -40,9 +40,11 @@ export class AccountsController {
     ){
         await this.accountService.updateAccount(id,updateAccountDto);
     }
-    @Delete(':id')
-    async deleteAccountById(
-    @Param('id', ParseIntPipe) id:number){
-        await this.accountService.deleteAccount(id);
+    @Delete('delete')
+    @UseGuards(AuthGuard('bearer'))
+    async deleteAccountById(@Request() req
+    ){
+        await this.accountService.deleteAccount(req.user);
     }
+
 }

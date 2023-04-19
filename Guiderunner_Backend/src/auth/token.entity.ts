@@ -6,6 +6,6 @@ export default class Token{
     @PrimaryColumn()
     token: string;
 
-    @ManyToOne(() => Account)
+    @ManyToOne(() => Account, {onDelete : "CASCADE"})
     account: Account;
 }

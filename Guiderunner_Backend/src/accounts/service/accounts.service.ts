@@ -41,7 +41,7 @@ export class AccountsService {
     updateAccount(id: number, updateAccountDetails: UpdateAccountParams){
         return this.accountRepository.update({ id }, {...updateAccountDetails });
     }
-    deleteAccount(id:number){
-        return this.accountRepository.delete({ id });
+    deleteAccount(accounts: Account){
+        return this.accountRepository.delete( accounts.id  );
     }
 }
