@@ -9,8 +9,9 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
 
 #### Előfeltételek:
   * NodeJS 18.16 (LTS)
-  Telepített MySQL / MariaDB
-     #### Ehhez használd az npm install --save @nestjs/typeorm typeorm mysql2
+  * Telepített MySQL / MariaDB
+#### Ehhez használd az ezt a parancsot ha még nincs feltelepítve.
+      npm install --save @nestjs/typeorm typeorm mysql2
 
 #### A parancs letölti a legújabb nestjs cli-t, amely lehetővéteszi hogy létrehozzuk a  nestjs projektet.
       npm i -g @nestjs/cli   
