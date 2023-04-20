@@ -47,6 +47,9 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     # Production módban
     npm run start:prod
     
+    # watch mode
+    npm run start:dev
+    
 # Egységtesztek futtatása:  
     npm run test
 ##### Tesztesetek a tests/thunderclient mappában találhatók
