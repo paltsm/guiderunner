@@ -2,9 +2,10 @@
 	display: flex;
 	height: 3.5rem;
 	width: 100%;
-	padding: 0.5rem;
-	position: fixed;
+	/* padding: 0.5rem; */
+	position: sticky;
 	top: 0;
+	background-color: red;
 }
 #header.open{
 	padding: 0;
@@ -16,6 +17,7 @@
 	gap: 0.5rem;
 	translate: calc(-100% - 0.5rem) 0;
 	transition: translate 0.2s linear;
+	padding: 0.5rem;
 }
 #navbar.open{
 	translate: 0 0;
@@ -37,6 +39,7 @@
 #nav-btn{
 	border: none;
 	position: absolute;
+	top: 0.5rem;
 	right: 0.5rem;
 	border-radius: 0.4rem;
 	aspect-ratio: 1/1;
