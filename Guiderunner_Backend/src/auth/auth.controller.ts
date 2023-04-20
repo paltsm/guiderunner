@@ -17,10 +17,10 @@ export class AuthController{
      const account = await accountRepo.findOneBy({ email: loginData.email })
      console.log(account);
      if (account == null){
-        throw new UnauthorizedException("Hibás email vagy jelszó");
+        throw new UnauthorizedException("email not registered");
      }
-     if (!await bcrypt.compare(loginData.password,account.password)){
-        throw new UnauthorizedException("Hibás email vagy jelszó");
+     if (!(await bcrypt.compare(loginData.password,account.password))){
+        throw new UnauthorizedException("wrong password");
      }
      return {
         token: await this.authService.generateTokenFor(account),
