@@ -1,6 +1,6 @@
 # GuideRunner
 
-# Leírás
+# Leírás:
 
 Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmazás dokumentálását hivatott bemutatni.
 
@@ -49,28 +49,39 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
 # Egységtesztek futtatása:  
     npm run test
    
-# Végpontok
- 
+# Végpontok:
 ## Accounts:
  
-    # Regisztráció
-    'POST' - http://localhost:3000/accounts
-
-    # Bejelntkezés
-    'POST' - http://localhost:3000/auth/login
-
-    # Kijelentkezés
-    'DELETE' - Auth - bearer(token beillesztése) localhost:3000/auth/logout
+### Regisztráció(POST):
+    http://localhost:3000/accounts
+    # Bevítel formatum:    
+    {
+     "username": "felhasználónév",
+     "email": "emailcí@example.com",
+     "password": "jelszó"
+    }
+### Bejelntkezés(POST):    
+    http://localhost:3000/auth/login
+    # Bevítel formatum: 
+    {
+     "email": "emailcí@example.com",
+     "password": "jelszó"
+    }
+### Kijelentkezés(DELETE):
+#### Auth - bearer(token beillesztése) 
+    http://localhost:3000/auth/logout
     
-    # Törlés
-    'DELETE' - Auth - bearer(token beillesztése) localhost:3000/account/delete
+### Törlés(DELETE):
+#### Auth - bearer(token beillesztése)
+     http://localhost:3000/account/delete
    
-### Beviteli adatok
+### Beviteli adatok:
     
-| Mező  | Leírás |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Mező  | Leírás | Típus |
+| ------------- | ------------- | ------------- |
+| username  | Felhasználó által megadott név | String |
+| email  | Felhasználó által megadott email cím  | String |
+| password  | Felhasználó által megadott jelszó  | String |
 
 
 
