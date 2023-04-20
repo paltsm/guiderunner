@@ -53,9 +53,9 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
    
 # Végpontok:
 ## Accounts:
-    # Regisztráció(POST):
+    Regisztráció(POST):
     http://localhost:3000/accounts
-    # Beviteli formátum:    
+    Beviteli formátum:    
     {
      "username":"TEST",
      "email":"TEST@gmail.com",
@@ -64,7 +64,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     
     Bejelentkezés(POST):   
     http://localhost:3000/auth/login
-    # Beviteli formátum: 
+    Beviteli formátum: 
     {
      "email":"TEST@gmail.com",
      "password":"TESTTEST"
@@ -72,7 +72,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     
     Adatok szerkesztése(PUT):
     http://localhost:3000/accounts/id
-    # Beviteli formátum:    
+    Beviteli formátum:    
     {
      "username":"TEST",
      "email":"TEST@gmail.com",
@@ -81,7 +81,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     
     Adatok szerkesztése(PATCH):
     http://localhost:3000/accounts/id
-    # Beviteli formátum:    
+    Beviteli formátum:    
     {
      "username":"TEST",
      "email":"TEST@gmail.com",
@@ -98,7 +98,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
 
     Record feltöltése(POST):
     http://localhost:3000/records
-    # Beviteli formátum:     
+    Beviteli formátum:     
     {
      "username":"Gabe",
      "gamename":"Hades",
@@ -110,7 +110,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     
     Record szerkesztése(PUT):
     http://localhost:3000/records/id
-    # Beviteli formátum:     
+    Beviteli formátum:     
     {
      "username":"Gabe",
      "gamename":"Hades",
@@ -122,7 +122,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     
     Record szerkesztése(PATCH):
     http://localhost:3000/records/id
-    # Beviteli formátum:     
+    Beviteli formátum:     
     {
      "username":"Gabe",
      "gamename":"Hades",
@@ -144,7 +144,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
 ## News:
     News feltöltése(POST):
     http://localhost:3000/news
-    # Beviteli formátum:     
+    Beviteli formátum:     
     {
      "gamename":"Resident Evil 4 Remake",
      "title":"The Best",
@@ -155,7 +155,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     
     News szerkesztése(PUT):
     http://localhost:3000/news/id
-    # Beviteli formátum:     
+    Beviteli formátum:     
     {
      "gamename":"Resident Evil 4 Remake",
      "title":"The Best",
@@ -166,7 +166,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     
     News szerkesztése(PATCH):
     http://localhost:3000/news/id
-    # Beviteli formátum:     
+    Beviteli formátum:     
     {
      "gamename":"Resident Evil 4 Remake",
      "title":"The Best",
@@ -188,7 +188,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
  
     Games feltöltése(POST):
     http://localhost:3000/games
-    # Beviteli formátum:     
+    Beviteli formátum:     
     {
      "gamename":"Hades",
      "release":"2020",
@@ -200,7 +200,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     
     Games szerkesztése(PUT):
     http://localhost:3000/games/id
-    # Beviteli formátum:     
+    Beviteli formátum:     
     {
      "gamename":"Hades",
      "release":"2020",
@@ -212,7 +212,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     
     Games szerkesztése(PATCH):
     http://localhost:3000/games/id
-    # Beviteli formátum:     
+    Beviteli formátum:     
     {
      "gamename":"Hades",
      "release":"2020",
