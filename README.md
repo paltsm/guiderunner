@@ -47,7 +47,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     # Production módban
     npm run start:prod
     
-    # watch mode
+    # Watch módban
     npm run start:dev
     
 # Egységtesztek futtatása:  
