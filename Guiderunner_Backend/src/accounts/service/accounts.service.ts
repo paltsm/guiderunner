@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { ConflictException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Account } from 'src/typeorm/entities/account.entity';
 import { CreateAccountParams, UpdateAccountParams } from 'src/utils/types';
@@ -31,6 +31,14 @@ export class AccountsService {
             ...accountDetails,
             password: hashPassword
         })
+		const takenemail=await this.accountRepository.findOneBy({email:accountDetails.email})
+		const takenusername=await this.accountRepository.findOneBy({username:accountDetails.username})
+		if(!(takenusername===null)){
+			throw new ConflictException("username alredy taken")
+		}
+		if(!(takenemail===null)){
+			throw new ConflictException("email alredy taken")
+		}
         const newAccount = this.accountRepository.create({ 
             ...accountDetails,
             password: hashPassword
