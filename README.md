@@ -53,35 +53,52 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
    
 # Végpontok:
 ## Accounts:
- 
-### Regisztráció(POST):
+    # Regisztráció(POST):
     http://localhost:3000/accounts
-    # Bevítelí formatum:    
+    # Beviteli formátum:    
     {
      "username": "felhasználónév",
-     "email": "emailcí@example.com",
+     "email": "emailcím@example.com",
      "password": "jelszó"
     }
-### Bejelntkezés(POST):    
+    
+    Bejelentkezés(POST):   
     http://localhost:3000/auth/login
-    # Bevítelí formatum: 
+    # Beviteli formátum: 
     {
      "email": "emailcím@example.com",
      "password": "jelszó"
     }
-### Kijelentkezés(DELETE):
-#### Auth - bearer(token beillesztése) 
-    http://localhost:3000/auth/logout
     
-### Törlés(DELETE):
-#### Auth - bearer(token beillesztése)
-     http://localhost:3000/account/delete
+    Adatok szerkesztése(PUT):
+    http://localhost:3000/accounts
+    # Beviteli formátum:    
+    {
+     "username": "felhasználónév",
+     "email": "emailcím@example.com",
+     "password": "jelszó"
+    }
+    
+    Adatok szerkesztése(PATCH):
+    http://localhost:3000/accounts
+    # Beviteli formátum:    
+    {
+     "username": "felhasználónév",
+     "email": "emailcím@example.com",
+     "password": "jelszó"
+    }
+    
+    Kijelentkezés(DELETE):
+    Auth - bearer(token beillesztése) - http://localhost:3000/auth/logout
+    
+    Törlés(DELETE):
+    Auth - bearer(token beillesztése) - http://localhost:3000/account/delete
 
 ## Records:
 
-### Record feltöltése(POST):
+    Record feltöltése(POST):
     http://localhost:3000/records
-    # Bevítelí formatum:    
+    # Beviteli formátum:     
     {
      "username":"felhasználónév",
      "gamename":"játéknev",
@@ -90,24 +107,32 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
      "difficulty":"Normal",
      "youtubelink":"https://youtube.com"
     }
-### Összes Lekérés(GET):    
+    
+    Összes Lekérés(GET):    
     http://localhost:3000/records
  
-### Csak egy Lekérés(GET):    
+    Csak egy Lekérés(GET):    
     http://localhost:3000/records/id
     
-### Rekord Törlése 'id'-val(DELETE):
+    Rekord Törlése 'id'-val(DELETE):
     http://localhost:3000/records/id
     
+### Felhasznált metódusok leírása:
 
+| Metódus  | Leírás |
+| ------------- | ------------- |
 
+| GET  | A GET-et arra használják, hogy adatokat kérjenek egy megadott erőforrásból |
+| POST  | A POST arra szolgál, hogy adatokat küldjön a szervernek az erőforrás létrehozása/frissítése céljából | 
+| PUT  | PUT is used to send data to a server to create/update a resource.  | 
+| password  | Felhasználó által megadott jelszó  | 
+| password  | Felhasználó által megadott jelszó  | 
    
-### Beviteli adatok:
+### Beviteli adatok leírása:
     
-| Mező  | Leírás | Típus |
+| Bevitelimező  | Leírás | Típus |
 | ------------- | ------------- | ------------- |
-| -------------  -------------  ------------- |
-| username  | Felhasználó által megadott név | String |
+| username  | Felhasználó által adott speciális név | String |
 | email  | Felhasználó által megadott email cím  | String |
 | password  | Felhasználó által megadott jelszó  | String |
 
