@@ -1,5 +1,6 @@
 import {Component} from "react";
 import {Link} from "react-router-dom";
+import Header from "../components/header";
 
 
 interface State {
@@ -21,7 +22,6 @@ class Register extends Component <{}, State> {
 		}
 	}
 	checkRegister = async () => {
-		console.log(this.state.username)
 		if (this.state.username=== ''){
 			this.setState({message: ['username is empty'] })
 			return
@@ -65,8 +65,8 @@ class Register extends Component <{}, State> {
 			method: 'POST',
 			headers: {
 				"Content-Type": "application/json"
-				},
-				body: JSON.stringify(data),
+			},
+			body: JSON.stringify(data),
 			});
 
 		console.log(response.status)
@@ -77,7 +77,7 @@ class Register extends Component <{}, State> {
 				email: '',
 				password: '',
 			})
-			this.setState({message: ['Sikeres regisztráció']})
+			this.setState({message: ['register succes!! you can now login']})
 		}
 			else{
 				const sing = await response.json() 
@@ -87,24 +87,31 @@ class Register extends Component <{}, State> {
   
 
     render() {
-        return(
+        return(<>
+		<Header/>
 			<main>
+			<h2>registration</h2>
 			<form id="form">
-				<h2>registration</h2>
-				<section id="username">
+				<section id="usernamesection">
 					<input type="text" placeholder="username (3-20)" id="usernameinput" value={this.state.username} required onChange={e => this.setState({username: e.currentTarget.value})}/>
 				</section>
-				<section id="email">
-					<input type="text" placeholder="email" id="emailinput" required onChange={e => this.setState({email: e.currentTarget.value})}/>
+
+				<section id="emailsection">
+					<input type="text" placeholder="email" id="emailinput" value={this.state.email} required onChange={e => this.setState({email: e.currentTarget.value})}/>
 				</section>
-				<section id="password">
-					<input type="password" placeholder="password (8-64)" id="upasswordeinput" required onChange={e => this.setState({password: e.currentTarget.value})}/>
+
+				<section id="passwordsection">
+					<input type="password" placeholder="password (8-64)" id="upasswordeinput" value={this.state.password} required onChange={e => this.setState({password: e.currentTarget.value})}/>
 				</section>
-				<button type="button" onClick={this.checkRegister}>register</button>
+
+				<section id="buttonsection">
+					<button type="button" onClick={this.checkRegister}>register</button>
+				</section>
+
 				<p id="message">{this.state.message}</p>
-				<Link className='gologin' to='/auth/login'>login</Link>
+				<Link className='gologin' to='/login'>login</Link>
 			</form>
-		</main> 
+		</main></>
         )
     }
 }

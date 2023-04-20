@@ -3,6 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import Main from "./pages/main";
 import Game from "./pages/game";
 import Register from "./pages/register";
+import './app.css';
+import './header.css';
+import './header.js';
+import Login from "./pages/login";
 
 class App extends Component<{}>{
 	render(){
@@ -12,7 +16,8 @@ class App extends Component<{}>{
 				<Route path="/games/:id" element={<Game></Game>}/>
 				<Route path="/users/:id" element={<Game></Game>}/>
 				<Route path="/news" element={<Game></Game>}/>
-				<Route path="/accounts" element={<Register></Register>}/>
+				<Route path="/register" element={<Register></Register>}/>
+				<Route path="/login" element={<Login></Login>}/>
 			</Routes>
 		)
 	}

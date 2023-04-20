@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Component } from "react";
 
 
+
 export default class Header extends Component<{}>{
 	// const hamburger=require("guiderunner_frontend\public\burger-bar.png")
 	render() {

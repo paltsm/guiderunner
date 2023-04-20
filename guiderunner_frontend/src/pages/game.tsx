@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import '../game.css';
+import { Component } from 'react';
 
 interface Game{
 	gamename:string;

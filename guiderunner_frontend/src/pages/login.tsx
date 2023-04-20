@@ -1,110 +1,129 @@
-import {Component} from "react";
-import {Link} from "react-router-dom";
+import { Component } from "react";
+import { useNavigate} from 'react-router-dom';
+import Header from "../components/header";
 
 
 interface State {
 	email: string;
-	username: string;
 	password: string;
+	token: string;
 	message: string[];
 }
 
+interface Token {
+	token:string
+}
 
-class Register extends Component <{}, State> {
+class Login extends Component <{}, State> {
 	constructor(props: {}){
 		super(props);
 		this.state = {
-			message: [],
 			email: '',
-			username: '',
 			password: '',
+			token: window.localStorage.getItem("token")||'',
+			message: []
 		}
 	}
-	checkRegister = async () => {
-		if (this.state.username.trim() === ''){
-			this.setState({message: ['username is empty'] })
-			return;
-		}
-		else if (this.state.username.trim().length < 3){
-			this.setState({message: ['username min length is 3'] })
-			return;
-		}
-		else if (this.state.username.trim().length > 20){
-			this.setState({message: ['username max length is 20'] })
-			return;
-		}
-		else if(this.state.email === ''){
-			this.setState({message: ['email is empty']})
+
+	handleLogin = async () => {
+		if (this.state.email === ''){
+			this.setState({message: ["email is empty"] })
 			return;
 		}
 		const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		if(emailRegex.test(this.state.email)){
+		console.log(emailRegex.test(this.state.email))
+		if(emailRegex.test(this.state.email)===false){
 			this.setState({message: ['email is wrong']})
-			return;
+			return
 		}
-		else if(this.state.password === ''){
-			this.setState({message: ['password is empty']})
+		else if (this.state.password === ''){
+			this.setState({message: ["password is empty"] })
 			return;
 		}
 		else if(this.state.password.length < 8){
 			this.setState({message: ['password min length is 8']})
-			return;
+			return
 		}
-		else if(this.state.password.length >64){
+		else if(this.state.password.length > 64){
 			this.setState({message: ['password max length is 64']})
-			return;
+			return
 		}
-		const data ={
-			"username": this.state.username,
-			"email": this.state.email,
-			"password": this.state.password
-		};
-		let response = await fetch("http://localhost:3000/accounts",{
-			method: 'POST',
-			headers: {
-				"Content-Type": "application/json"
+		else{
+			const data ={
+				email: this.state.email,
+				password: this.state.password,
+			};
+
+			let response = await fetch("http://localhost:3000/auth/login",{
+				method: 'POST',
+				headers: {
+					"Content-Type": "application/json"
 				},
 				body: JSON.stringify(data),
 			});
 
-		console.log(response.status)
-	
-		if(response.status === 201){
-			this.setState({
-				username: '',
-				email: '',
-				password: '',
-			})
-			this.setState({message: ['Sikeres regisztráció']})
-		}
-			else{
-				const sing = await response.json() 
-				this.setState({message: sing.message})
-			}	
-	}
-  
+			console.log(response.status)
 
-    render() {
-        return(
+			if(response.status === 201){
+				const res = await response.json() as Token
+				this.setState({
+					token: res.token,
+					message:['login success']
+				})
+				localStorage.setItem('token', res.token)
+				window.location.replace('/')
+			}
+			else{
+				const sing=await response.json()
+				this.setState({message:sing.message})
+			}
+
+		}
+
+	}
+	redirect = async () => {
+		const navigate = useNavigate();
+		navigate('/Menu', {replace: true});
+	}
+	
+
+	render() {
+		console.log(this.state.token)
+		return(<>
+			<Header />
 			<main>
-			<form id="form">
-				<h2>registration</h2>
-				<section id="username">
-					<input type="text" placeholder="username (3-20)" id="usernameinput" required onChange={e => this.setState({email: e.currentTarget.value})}/>
-				</section>
-				<section id="email">
-					<input type="text" placeholder="email" id="emailinput" required onChange={e => this.setState({email: e.currentTarget.value})}/>
-				</section>
-				<section id="password">
-					<input type="hidden" placeholder="password (8-64)" id="upasswordeinput" required onChange={e => this.setState({email: e.currentTarget.value})}/>
-				</section>
-				<button type="button" onClick={this.checkRegister}>register</button>
-				<p id="message"></p>
-				<Link className='gologin' to='/auth/login'>login</Link>
-			</form>
-		</main> 
-        )
-    }
+				<h3>login</h3>
+				{this.state.token.length>0 ? (
+				
+					<p>You are alredy logged in</p>
+
+					) : (
+						
+					<form className="rgblog">
+						<section id="emailsection">
+							<input type="text" placeholder="email" id="emailinput" value={this.state.email} required onChange={e => this.setState({email: e.currentTarget.value})}/>
+						</section>
+
+						<section id="passwordsection">
+							<input type="password" placeholder="password (8-64)" id="upasswordeinput" value={this.state.password} required onChange={e => this.setState({password: e.currentTarget.value})}/>
+						</section>
+
+						<section id="buttonsection">
+							<button type="button" onClick={this.handleLogin}>login</button>
+						</section>
+
+						<p>{this.state.message}</p>
+
+						{/* <section id="forgotbuttonsection">
+							<button onClick={this.forgotpasswordemail}>forgot password?</button>
+						</section> */}
+					</form>
+				)}
+				
+			</main>
+		</>
+		)
+	}
 }
 
-export default Register;
+export default Login;
