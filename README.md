@@ -1,17 +1,15 @@
 # GuideRunner
 
-## Leírás
+# Leírás
 
 Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmazás dokumentálását hivatott bemutatni.
 
 
-## Telepítési lépések:
 
-#### Előfeltételek:
+
+## Előfeltételek:
   * NodeJS 18.16 (LTS)
   * Telepített MySQL / MariaDB
-#### Ehhez használd az ezt a parancsot ha még nincs feltelepítve.
-      npm install --save @nestjs/typeorm typeorm mysql2
 
 #### A parancs letölti a legújabb nestjs cli-t, amely lehetővéteszi hogy létrehozzuk a  nestjs projektet.
       npm i -g @nestjs/cli   
@@ -37,7 +35,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
    ###### Ez a csomag, lehetővé teszi bármilyen strategy használatát passport-ból Nest.js-ig.
     npm i --save @nestjs/passport
     
-## Az alkalmazás futtatása:
+# Az alkalmazás futtatása:
 
     # Hagyományos módban
     npm run start
@@ -48,7 +46,34 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     # Production módban
     npm run start:prod
     
-## Egységtesztek futtatása:  
+# Egységtesztek futtatása:  
     npm run test
    
+# Végpontok
+ 
+## Accounts:
+ 
+    # Regisztráció
+    'POST' - http://localhost:3000/accounts
+
+    # Bejelntkezés
+    'POST' - http://localhost:3000/auth/login
+
+    # Kijelentkezés
+    'DELETE' - Auth - bearer(token beillesztése) localhost:3000/auth/logout
     
+    # Törlés
+    'DELETE' - Auth - bearer(token beillesztése) localhost:3000/account/delete
+   
+### Beviteli adatok
+    
+| Mező  | Leírás |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+
+
+
+
+
