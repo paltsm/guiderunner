@@ -10,6 +10,8 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
 ## Előfeltételek:
   * NodeJS 18.16 (LTS)
   * Telepített MySQL / MariaDB
+  
+###### Az alábbi parancsokat PowerShellba vagy Visual Studio Code Terminal-ba írjuk be.
 
 #### A parancs letölti a legújabb nestjs cli-t, amely lehetővéteszi hogy létrehozzuk a  nestjs projektet.
       npm i -g @nestjs/cli   
@@ -54,7 +56,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
  
 ### Regisztráció(POST):
     http://localhost:3000/accounts
-    # Bevítel formatum:    
+    # Bevítelí formatum:    
     {
      "username": "felhasználónév",
      "email": "emailcí@example.com",
@@ -62,9 +64,9 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     }
 ### Bejelntkezés(POST):    
     http://localhost:3000/auth/login
-    # Bevítel formatum: 
+    # Bevítelí formatum: 
     {
-     "email": "emailcí@example.com",
+     "email": "emailcím@example.com",
      "password": "jelszó"
     }
 ### Kijelentkezés(DELETE):
@@ -74,11 +76,37 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
 ### Törlés(DELETE):
 #### Auth - bearer(token beillesztése)
      http://localhost:3000/account/delete
+
+## Records:
+
+### Record feltöltése(POST):
+    http://localhost:3000/records
+    # Bevítelí formatum:    
+    {
+     "username":"felhasználónév",
+     "gamename":"játéknev",
+     "time":"10:10:10",
+     "platform":"PC",
+     "difficulty":"Normal",
+     "youtubelink":"https://youtube.com"
+    }
+### Összes Lekérés(GET):    
+    http://localhost:3000/records
+ 
+### Csak egy Lekérés(GET):    
+    http://localhost:3000/records/id
+    
+### Rekord Törlése 'id'-val(DELETE):
+    http://localhost:3000/records/id
+    
+
+
    
 ### Beviteli adatok:
     
 | Mező  | Leírás | Típus |
 | ------------- | ------------- | ------------- |
+| -------------  -------------  ------------- |
 | username  | Felhasználó által megadott név | String |
 | email  | Felhasználó által megadott email cím  | String |
 | password  | Felhasználó által megadott jelszó  | String |
