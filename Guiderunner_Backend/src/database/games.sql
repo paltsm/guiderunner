@@ -43,8 +43,12 @@ CREATE TABLE `games` (
 --
 
 INSERT INTO `games` (`id`, `gamename`, `release`, `platform`, `developer`, `description`, `image`, `genre`) VALUES
-(5, 'Hades', 2020, 'PC/Ps4/Ps5/Nsw/XboxOne/XboxSX', 'Super Giant Games', 'description', 'https://cdn.akamai.steamstatic.com/steam/apps/1145360/header.jpg?t=1680293801', 'Rouge-Like'),
-(6, 'Jump King', 2019, 'PC', 'Nexile', 'description', 'https://cdn.akamai.steamstatic.com/steam/apps/1061090/header.jpg?t=1669716164', 'Indie_Platformer');
+(1, 'Hades', 2020, 'PC/Ps4/Ps5/Nsw/XboxOne/XboxSX', 'Super Giant Games', 'Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre. ', 'https://cdn.akamai.steamstatic.com/steam/apps/1145360/library_600x900.jpg', 'Rouge-Like'),
+(2, 'Jump King', 2019, 'PC', 'Nexile', 'Take up the challenge and face true high-stakes platforming in Jump King! Struggle upwards in search of the Smoking Hot Babe of legend, but explore with care; a single missed jump could lead to a long fall back down..', 'https://cdn.akamai.steamstatic.com/steam/apps/1061090/library_600x900.jpg', 'Indie_Platformer');
+(3, 'Minecraft Legends', 2023, 'PC', 'Mojang Studios', 'Discover the mysteries of Minecraft Legends, a new action strategy game. Explore a gentle land of rich resources and lush biomes on the brink of destruction. The ravaging piglins have arrived, and it’s up to you to inspire your allies and lead them in strategic battles to save the Overworld', 'https://cdn.akamai.steamstatic.com/steam/apps/1928870/library_600x900.jpg', 'Strategy');
+(4, 'Half-Life 2', 2004, 'PC', 'Valve', "1998. HALF-LIFE sends a shock through the game industry with its combination of pounding action and continuous, immersive storytelling. Valve's debut title wins more than 50 game-of-the-year awards on its way to being named 'Best PC Game Ever' by PC Gamer, and launches a franchise with more than ", 'https://cdn.akamai.steamstatic.com/steam/apps/220/library_600x900.jpg', 'Strategy');
+(5, 'Katana ZERO', 2019, 'PC', 'askiisoft', "Katana ZERO is a stylish neo-noir, action-platformer featuring breakneck action and instant-death combat. Slash, dash, and manipulate time to unravel your past in a beautifully brutal acrobatic display. ", 'https://cdn.akamai.steamstatic.com/steam/apps/460950/library_600x900.jpg', 'action');
+(6, 'Counter-Strike: Global Offensive', 2012, 'PC', 'valve', "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.).", 'https://cdn.akamai.steamstatic.com/steam/apps/730/library_600x900.jpg', 'fps');
 
 --
 -- Indexek a kiírt táblákhoz

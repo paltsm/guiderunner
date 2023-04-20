@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString } from "class-validator";
+import { IsEmpty, IsNotEmpty, IsString } from "class-validator";
 
 export class CreateNewsDto {
   @IsNotEmpty({message:"Please do not leave this field empty!"})
@@ -17,7 +17,7 @@ export class CreateNewsDto {
   @IsString({ message: 'Please enter a valid source!' })  
   source: string;
   
-  @IsNotEmpty({message:"Please do not leave this field empty!"})
+  @IsEmpty({message:"Please do not leave this field empty!"})
   @IsString({ message: 'Please enter a valid date!' })  
   date: string;
 

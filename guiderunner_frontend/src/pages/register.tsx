@@ -40,7 +40,7 @@ class Register extends Component <{}, State> {
 		}
 		const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		console.log(emailRegex.test(this.state.email))
-		if(emailRegex.test(this.state.email)==false){
+		if(emailRegex.test(this.state.email)===false){
 			this.setState({message: ['email is wrong']})
 			return
 		}
