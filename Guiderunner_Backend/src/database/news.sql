@@ -1,11 +1,11 @@
 INSERT INTO `news` (`id`, `gamename`, `title`, `content`, `source`, `date`) VALUES
 (1, 'Hades', 'Hades: v1.0 Has Arrived!!', 'After two years in early access, the highly anticipated game Hades has finally been released in its 1.0 version. Developed by Supergiant Games, Hades has already gained a massive following for its captivating storyline, stunning graphics, and innovative gameplay mechanics.', 'https://store.steampowered.com/news/app/1145360/view/2908719181633108409', '2020-09-18'),
 
-(2, 'Hades', 'Hades: Nominated for Game of the Year!', 'Hades wins game of the year with its captivating story, stunning world-building, and polished gameplay mechanics. Supergiant Games should be proud of their achievement.', 'https://store.steampowered.com/news/app/1145360/view/4137084313616844005', '2020-12-22'),
+(2, 'Hades', 'Nominated for Game of the Year!', 'Hades wins game of the year with its captivating story, stunning world-building, and polished gameplay mechanics. Supergiant Games should be proud of their achievement.', 'https://store.steampowered.com/news/app/1145360/view/4137084313616844005', '2020-12-22'),
 
-(3, 'Portal 2', 'portal 2 rtx remake', 'nvidia has announced that they will remake portal 2 with rtx to show off the capabilities of their graphics card', 'https://store.steampowered.com/news/app/2012840/view/3620361554183195575', '2022-12-08'),
+(3, 'Portal 2', 'Rtx remake', 'Nvidia has announced that they will remake portal 2 with rtx to show off the capabilities of their graphics card', 'https://store.steampowered.com/news/app/2012840/view/3620361554183195575', '2022-12-08'),
 
-(4, 'Hades', 'Hades II: Coming to Steam Early Access!', 'Like its predecessor, Hades II will be available in Early Access here on Steam for some time leading up to its full v1.0 launch. Add Hades II to your wishlist for a handy reminder when the time comes', 'https://store.steampowered.com/news/app/1145350/view/3628242853594657531', '2022-12-08'),
+(4, 'Hades', 'Coming to Steam Early Access!', 'Like its predecessor, Hades II will be available in Early Access here on Steam for some time leading up to its full v1.0 launch. Add Hades II to your wishlist for a handy reminder when the time comes', 'https://store.steampowered.com/news/app/1145350/view/3628242853594657531', '2022-12-08'),
 
 (5, 'Counter-Strike: Global Offensive', 'Counter-Strike: Global Offensive is now available on Steam!', 'CS:GO expands on the classic team-based action gameplay that Counter-Strike pioneered. Featuring an arsenal of over 45 weapons, loads of maps, new game modes, new visuals, leaderboards, and over 165 Steam Achievements.', 'https://store.steampowered.com/news/app/730/view/2913221511623967917', '2012-08-22'),
 

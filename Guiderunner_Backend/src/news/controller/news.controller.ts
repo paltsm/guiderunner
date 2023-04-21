@@ -6,15 +6,12 @@ import { UpdateNewsDto } from '../dtos/updatenews.dto';
 @Controller('news')
 export class NewsController {
     constructor(private newsService:NewsService){
-        
     }
-
     @Get()
     async getAllNews(){
         const news = await this.newsService.findAllNews();
         return news;
     }
-
     @Post()
     createNewNews(@Body() createNewsDto: CreateNewsDto ){
         return this.newsService.createNews(createNewsDto);
