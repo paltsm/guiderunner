@@ -4,20 +4,31 @@ import { Component } from "react";
 
 
 export default class Header extends Component<{}>{
-	// const hamburger=require("guiderunner_frontend\public\burger-bar.png")
+	toggleheader(){
+		const HEADER=document.getElementById('header')
+		const NAVBAR=document.getElementById("navbar")
+		if(HEADER?.classList.contains('open')){
+			HEADER.classList.remove('open')
+			NAVBAR?.classList.remove('open')
+		}else{
+			HEADER?.classList.add('open')
+			NAVBAR?.classList.add('open')
+		}
+	}
 	render() {
-		return (
+		return (<>
 			<header id='header'>
 				<nav id='navbar'>
 					<Link to="/">home</Link>
 					<Link to="/games">games</Link>
 					<Link to="/news">news</Link>
-					<Link to="/login">login</Link>
 				</nav>
-				<button id='nav-btn' type='button'><img src="/burger-bar.png" alt="menu icon" id='menu-icon' /></button>
-			</header>
-	  );
+				<div>
+					<Link to="/login" id='loginbutton'>login</Link>
+					<button id='nav-btn' type='button' onClick={this.toggleheader}><img src="/burger-bar.png" alt="menu icon" id='menu-icon' /></button>
+				</div>
+			</header>			
+		</>);
 	}
 	
 }
-

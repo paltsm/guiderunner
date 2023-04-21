@@ -6,16 +6,17 @@
 	top: 0;
 	background-color: #012d41;
 	z-index: 1;
+	justify-content: space-between;
+	box-shadow: 0 0.2rem 0.5rem black;
 }
 #header.open{
 	filter: none;
-	/* color: orange; */
 }
-main.main{
+main{
 	filter: blur(0);
 	transition: filter 0.2s linear;
 }
-#header.open + main.main{
+#header.open + main{
 	filter: blur(4px);
 }
 #navbar{
@@ -37,18 +38,18 @@ main.main{
 	line-height: 1;
 	padding: 0.75rem;
 	text-decoration: none;
-	cursor: default;
+	cursor: pointer;
 }
 #nav-btn{
 	border: none;
-	position: absolute;
-	top: 0.5rem;
-	right: 0.5rem;
-	border-radius: 0.4rem;
+	/* position: absolute; */
+	/* top: 0.5rem; */
+	/* right: 0.5rem; */
+	/* border-radius: 0.4rem; */
 	height: 2.5rem;
 	width: 2.5rem;
 	background-color: transparent;
-	color: white;
+	/* color: white; */
 	font-size: 2rem;
 	display: flex;
 	align-items: center;
@@ -57,6 +58,21 @@ main.main{
 	width: 100%;
 	color: white;
 	filter: invert(75%) sepia(31%) saturate(6679%) hue-rotate(4deg) brightness(98%) contrast(101%);
+}
+#header>div{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+	margin-right: 0.5rem;
+
+}
+#loginbutton{
+	font-size: 1.3rem;
+	line-height: 1;
+	padding: 0.75rem;
+	text-decoration: none;
+	cursor: pointer;
 }
 @media (width >= 768px){
 	#navbar{

@@ -1,3 +1,6 @@
+*{
+	box-sizing: border-box;
+}
 body{
 	margin: 0;
 	box-sizing: border-box;
@@ -5,6 +8,20 @@ body{
 	color: white;
 	min-height: 100vh;
 	align-items: center;
+}
+#root{
+	min-height: 100vh;
+	
+}
+main{
+	width: min(100% - 2rem, 60rem);
+	margin:0 auto;
+	background-image: linear-gradient(-45deg,#01121a,#093649,#01121a);
+	min-height: calc(100vh - 3.5rem);
+	background-attachment: fixed;
+}
+h2{
+	margin: 0;
 }
 a{
 	color: #ed9b00;

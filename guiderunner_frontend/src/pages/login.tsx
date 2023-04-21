@@ -1,7 +1,5 @@
 import { Component } from "react";
-import { useNavigate} from 'react-router-dom';
 import Header from "../components/header";
-
 
 interface State {
 	email: string;
@@ -26,6 +24,7 @@ class Login extends Component <{}, State> {
 	}
 
 	handleLogin = async () => {
+		// if(this.state.token.length)
 		if (this.state.email === ''){
 			this.setState({message: ["email is empty"] })
 			return;
@@ -81,18 +80,18 @@ class Login extends Component <{}, State> {
 		}
 
 	}
-	redirect = async () => {
-		const navigate = useNavigate();
-		navigate('/Menu', {replace: true});
-	}
+	// redirect = async () => {
+	// 	const navigate = useNavigate();
+	// 	navigate('/Menu', {replace: true});
+	// }
 	
 
 	render() {
 		console.log(this.state.token)
 		return(<>
 			<Header />
-			<main>
-				<h3>login</h3>
+			<main className="main">
+				<h2>login</h2>
 				{this.state.token.length>0 ? (
 				
 					<p>You are alredy logged in</p>

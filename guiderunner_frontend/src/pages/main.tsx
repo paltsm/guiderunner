@@ -1,5 +1,4 @@
 import { Component } from 'react';
-
 import Header from '../components/header';
 
 interface Game{

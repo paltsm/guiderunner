@@ -5,7 +5,6 @@ import Game from "./pages/game";
 import Register from "./pages/register";
 import './app.css';
 import './header.css';
-import './header.js';
 import Login from "./pages/login";
 
 class App extends Component<{}>{
