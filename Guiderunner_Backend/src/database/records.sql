@@ -42,11 +42,11 @@ CREATE TABLE `records` (
 --
 
 INSERT INTO `records` (`id`, `username`, `gamename`, `time`, `platform`, `difficulty`, `youtubelink`) VALUES
-(1, 'user01', 'Hades', '10:10:22', 'PC', 'Normal', 'https://youtu.be/91t0ha9x0AE'),
-(2, 'user01', 'Jump King', '8:10:36', 'PC', 'Normal', 'https://youtu.be/muagJ3svdWU'),
-(3, 'user02', 'Jump King', '8:10:36', 'PC', 'Normal', 'https://youtu.be/muagJ3svdWU'),
-(4, 'user02', 'Jump King', '8:10:36', 'PC', 'Normal', 'https://youtu.be/muagJ3svdWU'),
-(5, 'user01', 'Jump King', '8:10:36', 'PC', 'Normal', 'https://youtu.be/muagJ3svdWU')
+(1, 'user001', 'Hades', '10:10:22', 'PC', 'Normal', 'https://youtu.be/91t0ha9x0AE'),
+(2, 'user002', 'Half-Life', '8:44:47', 'PC', 'Normal', 'https://youtu.be/muagJ3svdWU'),
+(3, 'user003', 'Portal', '8:00:01', 'PC', 'Normal', 'https://youtu.be/muagJ3svdWU'),
+(4, 'user003', 'Portal', '8:11:14', 'PC', 'Normal', 'https://youtu.be/muagJ3svdWU'),
+(5, 'user005', 'Jump King', '8:53:44', 'PC', 'Normal', 'https://youtu.be/muagJ3svdWU')
 
 --
 -- Indexek a kiírt táblákhoz

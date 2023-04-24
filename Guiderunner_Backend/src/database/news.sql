@@ -1,5 +1,5 @@
 INSERT INTO `news` (`id`, `gamename`, `title`, `content`, `source`, `date`) VALUES
-(1, 'Hades', 'Hades: v1.0 Has Arrived!!', 'After two years in early access, the highly anticipated game Hades has finally been released in its 1.0 version. Developed by Supergiant Games, Hades has already gained a massive following for its captivating storyline, stunning graphics, and innovative gameplay mechanics.', 'https://store.steampowered.com/news/app/1145360/view/2908719181633108409', '2020-09-18'),
+(1, 'Hades', 'New Version is released', 'After two years in early access, the highly anticipated game Hades has finally been released in its 1.0 version. Developed by Supergiant Games, Hades has already gained a massive following for its captivating storyline, stunning graphics, and innovative gameplay mechanics.', 'https://store.steampowered.com/news/app/1145360/view/2908719181633108409', '2020-09-18'),
 
 (2, 'Hades', 'Nominated for Game of the Year!', 'Hades wins game of the year with its captivating story, stunning world-building, and polished gameplay mechanics. Supergiant Games should be proud of their achievement.', 'https://store.steampowered.com/news/app/1145360/view/4137084313616844005', '2020-12-22'),
 
