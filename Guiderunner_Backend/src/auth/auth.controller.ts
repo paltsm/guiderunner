@@ -11,6 +11,7 @@ import { Delete } from "@nestjs/common";
 @Controller('auth')
 export class AuthController{
     constructor(private dataSource: DataSource, private authService: AuthService){}
+
     @Post('login')
     async login(@Body() loginData: LoginDto){
      const accountRepo = this.dataSource.getRepository(Account);
@@ -26,6 +27,15 @@ export class AuthController{
         token: await this.authService.generateTokenFor(account),
      };
     }
+
+	@UseGuards(AuthGuard('bearer'))
+	@Post('finduser')
+	async finduser(@Headers('authorization') authHeader: string){
+		const token = authHeader.split(' ')[1];
+		// console.log(this.authService.findUserByToken(token))
+		return this.authService.findUserByToken(token)
+	}
+
     @UseGuards(AuthGuard('bearer'))
     @Delete('logout')
     async deleteToken(@Headers('authorization') authHeader: string){
