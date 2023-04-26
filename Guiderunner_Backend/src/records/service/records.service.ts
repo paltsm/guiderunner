@@ -18,6 +18,9 @@ export class RecordsService {
     async findRecord(id:number){
         return await this.dataSource.getRepository(Records).findBy({id:id});
         }
+    async findRecordbyuser(username:string){
+        return await this.dataSource.getRepository(Records).findBy({username:username});
+        }
 
     
     createRecord(recordDetails:CreateRecordParams){

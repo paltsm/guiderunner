@@ -1,15 +1,5 @@
 import { Component } from 'react';
 
-interface Game{
-	gamename:string;
-	release:number;
-	genre:string;
-	platform:string;
-	developer:string;
-	description:string;
-	image:string;
-}
-
 interface State{
 	gamename:string;
 	release:number;
@@ -18,7 +8,6 @@ interface State{
 	developer:string;
 	description:string;
 	image:string;
-	game:Game[]
 }
 class Game extends Component<{},State>{
 	constructor(props:{}){
@@ -30,8 +19,7 @@ class Game extends Component<{},State>{
 			platform:"",
 			developer:"",
 			description:"asd",
-			image:"",
-			game:[]
+			image:""
 		}
 		this.data()
 	}
@@ -40,21 +28,28 @@ class Game extends Component<{},State>{
 		let id = window.location.pathname
 		const response=await fetch(`http://localhost:3000${id}`)
 		let data=await response.json()
+		console.log(data)
 		this.setState({
-			game:data
-			
+			gamename:data[0].gamename,
+			release:data[0].release,
+			genre:data[0].genre,
+			platform:data[0].platform,
+			developer:data[0].developer,
+			description:data[0].description,
+			image:data[0].image
 		})
 	}
 
 	
 	render(){
 		return <div id='card'>
-			{this.state.game.map((r)=><div className='gamenamerelease'><div id='gamename'>{r.gamename}</div><div id='release'>{r.release}</div></div>) }
-			{this.state.game.map((r)=><img id='image' src={r.image} alt='game'/>) }
-			{this.state.game.map((r)=><div id='genre'><span>genre:</span>{r.genre}</div>) }
-			{this.state.game.map((r)=><div id='platform'> <span>platform:</span>{r.platform}</div>) }
-			{this.state.game.map((r)=><div id='developer'><span>developer:</span>{r.developer}</div>) }
-			{this.state.game.map((r)=><div id='description'><span>description:</span>{r.description}</div>) }
+			<div className='gamenamerelease'><div id='gamename'>{this.state.gamename}</div><div id='release'>{this.state.release}</div></div>
+			<img id='image' src={this.state.image} alt='game'/>
+			<div id='genre'><span>genre:</span>{this.state.genre}</div>
+			<div id='platform'> <span>platform:</span>{this.state.platform}</div>
+			<div id='developer'><span>developer:</span>{this.state.developer}</div>
+			<div id='description'><span>description:</span>{this.state.description}</div>
+
 			
 		</div>
 	

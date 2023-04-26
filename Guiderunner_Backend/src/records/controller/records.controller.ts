@@ -16,6 +16,10 @@ export class RecordsController {
     findRecord(@Param('id') id: number){
         return this.recordService.findRecord(+id);
     }
+    @Get('/user/:username')
+    findRecordbyuser(@Param('username') username: string){
+        return this.recordService.findRecordbyuser(username);
+    }
     @Post()
     createRecord(@Body() createRecordDto: CreateRecordDto ){
         return this.recordService.createRecord(createRecordDto);

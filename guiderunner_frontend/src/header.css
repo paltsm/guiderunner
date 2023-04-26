@@ -39,31 +39,28 @@ main{
 	padding: 0.75rem;
 	text-decoration: none;
 	cursor: pointer;
+	color: #ed9b00;
 }
 #nav-btn{
 	border: none;
-	/* position: absolute; */
-	/* top: 0.5rem; */
-	/* right: 0.5rem; */
-	/* border-radius: 0.4rem; */
-	height: 2.5rem;
-	width: 2.5rem;
+	height: 2rem;
+	width: 2rem;
 	background-color: transparent;
-	/* color: white; */
 	font-size: 2rem;
 	display: flex;
 	align-items: center;
+	padding: 0;
 }
 #menu-icon{
-	width: 100%;
+	height: 100%;
 	color: white;
 	filter: invert(75%) sepia(31%) saturate(6679%) hue-rotate(4deg) brightness(98%) contrast(101%);
 }
-#header>div{
+#inorout{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: 1rem;
+	/* gap: 0.5rem; */
 	margin-right: 0.5rem;
 
 }
@@ -73,6 +70,44 @@ main{
 	padding: 0.75rem;
 	text-decoration: none;
 	cursor: pointer;
+}
+#userdetails{
+	position: relative;
+}
+#usersummary{
+	background-color: transparent;
+	color: #ed9b00;
+	border: none;
+	font-size: 1.5rem;
+	line-height: 1;
+	padding: 0.75rem;
+	cursor: pointer;
+	list-style: none;
+	user-select: none;
+}
+#popup{
+	position: absolute;
+	top: auto;
+	right: -2.5rem;
+	width: 200%;
+	background-color: #02415e;
+	margin:0.25rem 0;
+}
+#popup > *{
+	background-color: transparent;
+	color: #ed9b00;
+	border: none;
+	width: 100%;
+	display: inline-block;
+	font-size: 1rem;
+	text-decoration: none;
+	text-align: center;
+	padding: 0.25rem;
+	cursor: pointer;
+}
+#popup > *:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+	color: yellow;
 }
 @media (width >= 768px){
 	#navbar{
@@ -86,5 +121,8 @@ main{
 	}
 	#nav-btn{
 		display: none;
+	}
+	#popup{
+		right: -0.5rem
 	}
 }

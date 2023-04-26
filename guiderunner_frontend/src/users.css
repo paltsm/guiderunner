@@ -1,0 +1,14 @@
+.username{
+	display: flex;
+	/* justify-content: space-between; */
+	gap: 1rem;
+	padding: 1rem;
+	align-items: center;
+}
+#followbutton{
+	background-color: #ffffff60;
+	border: 1px solid #ffffff80;
+	border-radius: 0.2rem;
+	padding: 0.2rem;
+	color: white;
+}

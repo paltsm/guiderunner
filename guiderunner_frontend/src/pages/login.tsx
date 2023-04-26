@@ -1,5 +1,4 @@
 import { Component } from "react";
-import Header from "../components/header";
 
 interface State {
 	email: string;
@@ -64,51 +63,39 @@ class Login extends Component <{}, State> {
 			console.log(response.status)
 
 			if(response.status === 201){
-				const res = await response.json() as Token
+				const data = await response.json() as Token
 				this.setState({
-					token: res.token,
+					token: data.token,
 					message:['login success']
 				})
-				localStorage.setItem('token', res.token)
+				localStorage.setItem('token', data.token)
 				window.location.replace('/')
 			}
 			else{
-				const sing=await response.json()
-				this.setState({message:sing.message})
+				const res=await response.json()
+				this.setState({message:res.message})
 			}
 
 		}
 
 	}
-	// redirect = async () => {
-	// 	const navigate = useNavigate();
-	// 	navigate('/Menu', {replace: true});
-	// }
-	
 
 	render() {
-		console.log(this.state.token)
 		return(<>
-			<Header />
 			<main className="main">
 				<h2>login</h2>
-				{this.state.token.length>0 ? (
-				
-					<p>You are alredy logged in</p>
-
-					) : (
-						
+				{localStorage.getItem('token')===''||localStorage.getItem('token')===null ? (
 					<form className="rgblog">
 						<section id="emailsection">
-							<input type="text" placeholder="email" id="emailinput" value={this.state.email} required onChange={e => this.setState({email: e.currentTarget.value})}/>
+							<input type="text" placeholder="email" className="input" id="emailinput" value={this.state.email} required onChange={e => this.setState({email: e.currentTarget.value})}/>
 						</section>
 
 						<section id="passwordsection">
-							<input type="password" placeholder="password (8-64)" id="upasswordeinput" value={this.state.password} required onChange={e => this.setState({password: e.currentTarget.value})}/>
+							<input type="password" placeholder="password (8-64)" className="input" id="upasswordeinput" value={this.state.password} required onChange={e => this.setState({password: e.currentTarget.value})}/>
 						</section>
 
 						<section id="buttonsection">
-							<button type="button" onClick={this.handleLogin}>login</button>
+							<button type="button" id="button" onClick={this.handleLogin}>login</button>
 						</section>
 
 						<p>{this.state.message}</p>
@@ -117,11 +104,11 @@ class Login extends Component <{}, State> {
 							<button onClick={this.forgotpasswordemail}>forgot password?</button>
 						</section> */}
 					</form>
+				) : (
+					<p>You are alredy logged in</p>
 				)}
-				
 			</main>
-		</>
-		)
+		</>)
 	}
 }
 
