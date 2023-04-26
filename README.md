@@ -261,16 +261,17 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
 | password | Regisztrációhoz vagy bejelentkezéshez használt jelszó  | string |
 | platform | A megjelenítendő Game vagy Speedrun hozzáadásának platformja(iii) | string |
 | release  | A megjelenített játék megjelenésének ideje | number |
-| source  | A News oldal hírének forrása  | string |
+| source  | A News oldal hírének forrása  | string(iv) |
 | time | Speedrun hozzáadásához használt idő | string |
-| title  | A News(iv) oldal fő szalagcíme | string |
+| title  | A News(v) oldal fő szalagcíme | string |
 | username | Regisztrációhoz vagy Speedrun hozzáadásához használt speciális felhasználónév | string |
 | youtubelink | Felhasználó által elvégzett Speedrun igazoló videója | string |
 
   * 1. felhasználói oldal, Speedrun = egy videojáték vagy egy játékszint lehető leggyorsabb befejezése
   * 2. fejlesztői oldal,felhasználó nem szerkesztheti
   * 3. platform = a játék ezekre az eszözökre jelent meg
-  * 4. híreket megjelenítő oldal
+  * 4. bármely karaktersorozat, amelyet egy script szó szerint értelmez
+  * 5. híreket megjelenítő oldal
   
 ### Felhasznált class-validator-ok:
 
