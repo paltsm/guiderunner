@@ -272,6 +272,15 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
   * 3. platform = a játék ezekre az eszözökre jelent meg
   * 4. híreket megjelenítő oldal
   
+### Felhasznált class-validator-ok:
+
+| Validátorok | Leírás |
+| ------------- | ------------- |
+| IsNotEmpty  | A mező nem maradhat üresen | 
+| IsString  | A mezőnek stringnek kell lennie("") |
+| IsUrl  | A mezőnek url-nek kell lennie |
+| MinLength  | A mező minimum karaktertartalma  |
+| MaxLength  | A mező maximum karaktertartalma  |
 
 
 
