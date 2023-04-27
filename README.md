@@ -4,7 +4,7 @@ A GuideRunner egy játék híreket és speedrunokat összesítő projekt,
 ahol a felhasználó hozzáadhatja saját eredményeit, 
 illetve az általunk felrakott útmutató segítségével képes javítani az idején. 
 
-A projekt kitalálói és készítői: Deli Gábor és Palotás Mihály
+A projekt kitalálói és készítői: Deli Gábor és Palotás Mihály.
 
 
 # Leírás:
@@ -32,7 +32,8 @@ Ez a dokumentáció egy NestJS-en alapuló, TypeScripten elkészített alkalmaz�
     npm install --save @nestjs/typeorm typeorm mysql2
     
    
-   
+###### Egy egyszerű plugin az osztálytranszformátorhoz és osztályellenőrzőhöz, amely ezeket egy programozóbarát API-ban egyesíti.
+    npm i --save class-validator class-transformer
    
    
 #### A következő parancsok az alkalmazás hitelesítését fogja segíteni:
@@ -292,6 +293,8 @@ Ez a dokumentáció egy NestJS-en alapuló, TypeScripten elkészített alkalmaz�
 | IsUrl  | A mezőnek url-nek kell lennie |
 | MinLength  | A mező minimum karaktertartalma  |
 | MaxLength  | A mező maximum karaktertartalma  |
+
+
 
 
 
