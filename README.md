@@ -1,8 +1,15 @@
 # GuideRunner
 
+A GuideRunner egy játék híreket és speedrunokat összesítő projekt, 
+ahol a felhasználó hozzáadhatja saját eredményeit, 
+illetve az általunk felrakott útmutató segítségével képes javítani az idején. 
+
+A projekt kitalálói és készítői: Deli Gábor és Palotás Mihály
+
+
 # Leírás:
 
-Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmazás dokumentálását hivatott bemutatni.
+Ez a dokumentáció egy NestJS-en alapuló, TypeScripten elkészített alkalmazás dokumentálását hivatott bemutatni.
 
 
 ## Előfeltételek:
@@ -11,23 +18,25 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
   
 ##### Az alábbi parancsokat PowerShellba vagy Visual Studio Code Terminal-ba írjuk be.
 
+
 ###### A parancs letölti a legújabb nestjs cli-t, amely lehetővéteszi hogy létrehozzuk a  nestjs projektet.
       npm i -g @nestjs/cli   
-###### A parancs létrehozza a nestjs mappádat a szükséges fájlokkal.
+      
+      
+###### A parancs létrehozza a nestjs mappát a szükséges fájlokkal.
 ###### A package mangernel pedig válasszuk az 'npm'-et.
     nest new projekted_neve
 
 
-
-###### A parancs letölti azta csomagot amely lehetővé teszi az SQL adatbázissal való integrációt.
+###### A parancs letölti azt a csomagot, amely lehetővé teszi az SQL adatbázissal való integrációt.
     npm install --save @nestjs/typeorm typeorm mysql2
     
    
    
    
    
-#### A következő parancsok az alkalmazás hitelesítést fogja segíteni:
-   ###### Ez a modul lehetővé teszi a HTTP-kérések hitelesítését vivőjogkivonatokkal
+#### A következő parancsok az alkalmazás hitelesítését fogja segíteni:
+   ###### Ez a modul lehetővé teszi a HTTP-kérések hitelesítését vivőjogkivonatokkal.
     npm i --save  passport passport-http-bearer
     
    ###### Ez a modul lehetővé teszi a felhasználónévvel és jelszóval történő hitelesítést.
@@ -52,6 +61,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     
 # Egységtesztek futtatása:  
     npm run test
+    
 ##### Tesztesetek a tests/thunderclient mappában találhatók
    
 # Végpontok:
