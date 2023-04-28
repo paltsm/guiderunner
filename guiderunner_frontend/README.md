@@ -10,7 +10,9 @@ ez a webes felület arra szolgál hogy egyszerűen figyelemmel kövesd kedvenc j
 
 a mappába mész és beírod: npm start
 
-#oldalak
+# oldalak
+
+a főoldal, az a localhost:3001, ennek ezek a végei lehetnek
 
 | path | Leírás | Egyéb megjegyzések |
 | ------------- | ------------- | ------------- |
@@ -20,6 +22,14 @@ a mappába mész és beírod: npm start
 | /validate | ha egy admin vagy (azt kérni kell), akkor tudsz speedrun-okat igazolni/elutasítani |  |
 | /news | a legújabb hírek vannak itt, a címre nyomva elkülöníti az egy hírt | néha nem akar betölteni |
 | /about | itt lett volna emailcím és a csapatról szó | nincs kész X |
+| /register | itt lehet regisztrálni |  |
+| /login | itt lehet bejelentkezni | visszavisz a főoldalra |
+
+## kihagyott dolgok:
+- guide (útmutatók)
+- speedrun beadás
+- hírek szortálása
+- ajánlott játékok a főoldalon
 
 ---
 
