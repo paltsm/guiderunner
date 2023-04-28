@@ -15,11 +15,8 @@ export class NewsController {
         return news;
     }
 	@Get(':id')
-	async getNews(@Param() id:number){
-		console.log(id)
-		const news= await this.dataSource.getRepository(News).findOne({where:{id:3}})
-		console.log(news)
-		return news
+	async getNews(@Param('id') id:number){
+		return await this.dataSource.getRepository(News).findOne({where:{id:id}})
 	}
     @Post()
     createNewNews(@Body() createNewsDto: CreateNewsDto ){
