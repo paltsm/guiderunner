@@ -4,7 +4,6 @@ A GuideRunner egy játék híreket és speedrunokat összesítő projekt,
 ahol a felhasználó hozzáadhatja saját eredményeit, 
 illetve az általunk felrakott útmutató segítségével képes javítani az idején. 
 
-A projekt kitalálói és fejlesztői: Deli Gábor és Palotás Mihály.
 
 
 # Leírás:
@@ -295,6 +294,9 @@ Ez a dokumentáció egy NestJS-en alapuló, TypeScripten elkészített alkalmaz�
 | MaxLength  | A mező maximum karaktertartalma  |
 
 
+### A projekt kitalálói és fejlesztői: 
+#### Deli Gábor https://github.com/G4B3E 
+#### Palotás Mihály https://github.com/paltsm
 
 
 
