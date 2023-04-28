@@ -1,3 +1,38 @@
+# GuideRunner Frontend
+
+ez a webes felület arra szolgál hogy egyszerűen figyelemmel kövesd kedvenc játékaidat, legyen szó hírekről vagy speedrun-okról.
+
+
+# Telepítés
+    npm i
+
+## indítás
+
+a mappába mész és beírod: npm start
+
+# oldalak
+
+a főoldal, az a localhost:3001, ennek ezek a végei lehetnek
+
+| path | Leírás | Egyéb megjegyzések |
+| ------------- | ------------- | ------------- |
+| / | főoldal | nincs kész, lett volna sokkal több |
+| /user/:id | felhasználók profilja, ha be vagy jelentkezve, tudnál embereket követni |  |
+| /games/:id | játékok profilja, lehet követni és speedrun-okat látni az oldalon | lettek volna még hírek és útmutatók is |
+| /validate | ha egy admin vagy (azt kérni kell), akkor tudsz speedrun-okat igazolni/elutasítani |  |
+| /news | a legújabb hírek vannak itt, a címre nyomva elkülöníti az egy hírt | néha nem akar betölteni |
+| /about | itt lett volna emailcím és a csapatról szó | nincs kész X |
+| /register | itt lehet regisztrálni |  |
+| /login | itt lehet bejelentkezni | visszavisz a főoldalra |
+
+## kihagyott dolgok:
+- guide (útmutatók)
+- speedrun beadás
+- hírek szortálása
+- ajánlott játékok a főoldalon
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

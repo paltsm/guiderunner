@@ -1,27 +1,36 @@
-import { IsNotEmpty, IsString } from "class-validator";
+import { IsNotEmpty, IsOptional, IsString } from "class-validator";
 
 export class UpdateRecordDto {
-  @IsNotEmpty({message:"Please do not leave this field empty!"})
-  @IsString({ message: 'Please enter a valid username!' })
+//   @IsNotEmpty({message:"Please do not leave this field empty!"})
+//   @IsString({ message: 'Please enter a valid username!' })
+  @IsOptional()
   username: string;
-
-  @IsNotEmpty({message:"Please do not leave this field empty!"})
-  @IsString({ message: 'Please enter a valid gamename!' })
+  
+  @IsOptional()
+//   @IsNotEmpty({message:"Please do not leave this field empty!"})
+//   @IsString({ message: 'Please enter a valid gamename!' })
   gamename: string;
-
-  @IsNotEmpty({message:"Please do not leave this field empty!"})
-  @IsString({ message: 'Please enter a valid time! Use this format "hour:minute:second"!' })
+  
+  @IsOptional()
+//   @IsNotEmpty({message:"Please do not leave this field empty!"})
+//   @IsString({ message: 'Please enter a valid time! Use this format "hour:minute:second"!' })
   time: string;
-
-  @IsNotEmpty({message:"Please do not leave this field empty!"})
-  @IsString({ message: 'Please enter a valid platform!' })
+  
+  @IsOptional()
+//   @IsNotEmpty({message:"Please do not leave this field empty!"})
+//   @IsString({ message: 'Please enter a valid platform!' })
   platform: string;
-
-  @IsNotEmpty({message:"Please do not leave this field empty!"})
-  @IsString({ message: 'Please enter a valid defficulty!' })
+  
+  @IsOptional()
+//   @IsNotEmpty({message:"Please do not leave this field empty!"})
+//   @IsString({ message: 'Please enter a valid defficulty!' })
   difficulty: string;
-
-  @IsNotEmpty({message:"Please do not leave this field empty!"})
-  @IsString({ message: 'Please enter a valid link!' })
+  
+  @IsOptional()
+//   @IsNotEmpty({message:"Please do not leave this field empty!"})
+//   @IsString({ message: 'Please enter a valid link!' })
   youtubelink: string;
+
+  @IsNotEmpty({message:"verify empty"})
+  verif:boolean
 }

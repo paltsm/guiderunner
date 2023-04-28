@@ -12,13 +12,15 @@
 }
 #infowithimage>img{
 	width: min(50%,20rem);
-	margin:0 0.5rem 0.5rem 0;
-	float: left;
-	z-index: 1;
+	aspect-ratio: 2/3;
+	/* margin:0 0.5rem 0.5rem 0; */
+	/* float: left; */
+	/* z-index: 1; */
 	border: 2px solid #fff6;
+	flex-shrink: 0;
 }
 #info{
-	display: block;
+	/* display: block; */
 }
 #info>div{
 	padding:0.5rem 0.5rem 0.5rem 0;
@@ -43,4 +45,7 @@
 
 #infowithimage{
 	background-color: #fff3;
+	display: flex;
+	align-items: start;
+	/* background-image: url(); */
 }

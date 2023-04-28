@@ -146,13 +146,18 @@ class Users extends Component<{},State>{
 						<Link id='followbutton' to="/login" onClick={this.checkfollow}>follow</Link>
 					) : (	
 						this.state.user.id==this.state.id ? (
-							<div id='settingsbutton'>settings</div>
+							// <div id='settingsbutton'>settings</div>
+							<></>
 						) : (
 							<button id='followbutton' onClick={this.checkfollow}>follow</button>
 						)
 					)}
 
 				</div>
+				{this.state.games.length==0?(
+					<></>
+				):(
+
 				<div id='gamesslide'>
 				<button className="button prev" onClick={this.scrollingleft}>&lt;</button>
 					{this.state.games.map((game)=>{
@@ -167,6 +172,7 @@ class Users extends Component<{},State>{
 				})}
 					<button className="button next" onClick={this.scrollingright}>&gt;</button>
 				</div>
+				)}
 			</main>
 		</>)
 	
