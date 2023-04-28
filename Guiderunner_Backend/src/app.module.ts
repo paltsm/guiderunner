@@ -13,6 +13,10 @@ import Records from './typeorm/entities/records.entity';
 import Token from './auth/token.entity';
 import { AuthModule } from './auth/auth.module';
 import { PassportModule } from '@nestjs/passport';
+import Following from './typeorm/entities/aaafollowing.entity';
+import { FollowingModule } from './following/following.module';
+import FollowingGames from './following/followingGames.entity';
+import FollowingUsers from './following/followingUsers.entity';
 
 
 
@@ -24,12 +28,12 @@ import { PassportModule } from '@nestjs/passport';
     username: 'root',
     password: '',
     database: 'guide_runner',
-    entities: [Account,Games,News,Records,Token],
+    entities: [Account,Games,News,Records,Token,FollowingGames,FollowingUsers],
     synchronize: true,
     migrationsRun: false,
     
   }), AccountsModule, GamesModule, NewsModule, RecordsModule,AuthModule,
-  PassportModule, ],
+  PassportModule,FollowingModule],
   controllers: [AppController],
   providers: [AppService],
 })

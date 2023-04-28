@@ -23,4 +23,7 @@ export default class Records {
   @Column()
   youtubelink: string;
 
+  @Column({default:false})
+  verif: boolean;
+
 }
