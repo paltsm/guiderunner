@@ -13,7 +13,6 @@ import Records from './typeorm/entities/records.entity';
 import Token from './auth/token.entity';
 import { AuthModule } from './auth/auth.module';
 import { PassportModule } from '@nestjs/passport';
-import Following from './typeorm/entities/aaafollowing.entity';
 import { FollowingModule } from './following/following.module';
 import FollowingGames from './following/followingGames.entity';
 import FollowingUsers from './following/followingUsers.entity';
