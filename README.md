@@ -4,7 +4,7 @@ A GuideRunner egy játék híreket és speedrunokat összesítő projekt,
 ahol a felhasználó hozzáadhatja saját eredményeit, 
 illetve az általunk felrakott útmutató segítségével képes javítani az idején. 
 
-A projekt kitalálói és készítői: Deli Gábor és Palotás Mihály.
+A projekt kitalálói és fejlesztői: Deli Gábor és Palotás Mihály.
 
 
 # Leírás:
