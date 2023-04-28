@@ -1,0 +1,477 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Tesztesetek",
+    "dateExported": "2023-04-28T18:33:31.068Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "dfcb0e38-cfa8-4351-9e22-2df40e626c93",
+            "name": "POST",
+            "containerId": "",
+            "created": "2023-04-28T18:08:32.217Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "9ca77f44-4bf0-4fb9-a1ad-b85699284586",
+            "name": "GET",
+            "containerId": "",
+            "created": "2023-04-28T18:08:37.153Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "b8707c2b-2b48-4d0b-8d43-877d7d4669f5",
+            "name": "DELETE",
+            "containerId": "",
+            "created": "2023-04-28T18:08:48.505Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "adbb1738-b927-4ea2-b14d-7434a8e75cd5",
+            "name": "PATCH/PUT",
+            "containerId": "",
+            "created": "2023-04-28T18:08:56.753Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "364dc761-83e3-42dd-b8ab-0adfc42f3bd3",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "9ca77f44-4bf0-4fb9-a1ad-b85699284586",
+            "name": "localhost:3000/news",
+            "url": "localhost:3000/news",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-04-28T18:09:30.354Z",
+            "modified": "2023-04-28T18:11:11.666Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "940fed83-9800-4b17-b34b-616865dbe2f4",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "dfcb0e38-cfa8-4351-9e22-2df40e626c93",
+            "name": "localhost:3000/accounts",
+            "url": "localhost:3000/accounts",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-04-28T18:12:55.108Z",
+            "modified": "2023-04-28T18:14:08.931Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"Test00\",\n  \"email\":\"Test00@gmail.com\",\n  \"password\":\"TestTest\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bb0575ad-fd4a-4f31-9a85-1d5d1f3e2e8f",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "9ca77f44-4bf0-4fb9-a1ad-b85699284586",
+            "name": "localhost:3000/records",
+            "url": "localhost:3000/records",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-28T18:09:37.266Z",
+            "modified": "2023-04-28T18:11:12.629Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0eacc513-e53f-47c3-96fb-64314498747f",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "9ca77f44-4bf0-4fb9-a1ad-b85699284586",
+            "name": "localhost:3000/games",
+            "url": "localhost:3000/games",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-04-28T18:09:46.098Z",
+            "modified": "2023-04-28T18:11:13.662Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "95cf987d-be22-4c03-ad78-2aaa813f43b4",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "9ca77f44-4bf0-4fb9-a1ad-b85699284586",
+            "name": "localhost:3000/accounts",
+            "url": "localhost:3000/accounts",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-04-28T18:09:50.238Z",
+            "modified": "2023-04-28T18:11:14.627Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2c20eea0-e11e-42cf-a50e-cb36823d56b2",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "dfcb0e38-cfa8-4351-9e22-2df40e626c93",
+            "name": "localhost:3000/news",
+            "url": "localhost:3000/news",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-04-28T18:17:21.191Z",
+            "modified": "2023-04-28T18:17:21.191Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"gamename\":\"Test\",\n  \"title\":\"Test\",\n  \"content\":\"Test\",\n  \"source\":\"Test\",\n  \"date\":\"0000-00-00\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fa1ccb1e-237f-4261-8e76-e1858fc547d6",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "dfcb0e38-cfa8-4351-9e22-2df40e626c93",
+            "name": "localhost:3000/games",
+            "url": "localhost:3000/games",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-04-28T18:18:20.628Z",
+            "modified": "2023-04-28T18:18:20.628Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"gamename\":\"Test\",\n  \"release\":\"Test\",\n  \"genre\":\"Test\",\n  \"platform\":\"Test\",\n  \"developer\":\"Test\",\n  \"description\":\"Test\",\n  \"image\":\"Test\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "db8e336f-8e66-4b16-a184-9a7757d697f8",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "dfcb0e38-cfa8-4351-9e22-2df40e626c93",
+            "name": "localhost:3000/records",
+            "url": "localhost:3000/records",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-04-28T18:19:41.414Z",
+            "modified": "2023-04-28T18:19:41.414Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"Test\",\n  \"gamename\":\"Test\",\n  \"time\":\"Test\",\n  \"platform\":\"Test\",\n  \"difficulty\":\"Test\",\n  \"youtubelink\":\"Test\",\n  \"verif\":0\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7df6fb62-3762-42e7-9ccf-8a43e05c1f52",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "b8707c2b-2b48-4d0b-8d43-877d7d4669f5",
+            "name": "localhost:3000/records/7",
+            "url": "localhost:3000/records/7",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-04-28T18:20:13.986Z",
+            "modified": "2023-04-28T18:20:13.986Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"Test\",\n  \"gamename\":\"Test\",\n  \"time\":\"Test\",\n  \"platform\":\"Test\",\n  \"difficulty\":\"Test\",\n  \"youtubelink\":\"Test\",\n  \"verif\":0\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a5d36558-38c4-42cc-bb79-800bd0b1ac28",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "adbb1738-b927-4ea2-b14d-7434a8e75cd5",
+            "name": "localhost:3000/records/8",
+            "url": "localhost:3000/records/8",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2023-04-28T18:21:04.734Z",
+            "modified": "2023-04-28T18:21:04.734Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"teszt\",\n  \"gamename\":\"Test\",\n  \"time\":\"Test\",\n  \"platform\":\"Test\",\n  \"difficulty\":\"Test\",\n  \"youtubelink\":\"Test\",\n  \"verif\":0\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ed69d8c7-c0ba-4eaa-ac41-593dc816459e",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "adbb1738-b927-4ea2-b14d-7434a8e75cd5",
+            "name": "localhost:3000/records/8",
+            "url": "localhost:3000/records/8",
+            "method": "PATCH",
+            "sortNum": 100000,
+            "created": "2023-04-28T18:21:26.202Z",
+            "modified": "2023-04-28T18:21:26.202Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"teszt\",\n  \"gamename\":\"teszt\",\n  \"time\":\"teszt\",\n  \"platform\":\"teszt\",\n  \"difficulty\":\"teszt\",\n  \"youtubelink\":\"teszt\",\n  \"verif\":1\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "66f306cf-57ef-479b-835b-f099dac2efd3",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "adbb1738-b927-4ea2-b14d-7434a8e75cd5",
+            "name": "localhost:3000/games",
+            "url": "localhost:3000/games/7",
+            "method": "PATCH",
+            "sortNum": 110000,
+            "created": "2023-04-28T18:22:21.682Z",
+            "modified": "2023-04-28T18:22:21.682Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"gamename\":\"teszt\",\n  \"release\":\"teszt\",\n  \"genre\":\"teszt\",\n  \"platform\":\"teszt\",\n  \"developer\":\"Test\",\n  \"description\":\"Test\",\n  \"image\":\"Test\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "076c3c1d-8c0d-4bef-aa08-723119ac680a",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "adbb1738-b927-4ea2-b14d-7434a8e75cd5",
+            "name": "localhost:3000/games",
+            "url": "localhost:3000/games/7",
+            "method": "PUT",
+            "sortNum": 120000,
+            "created": "2023-04-28T18:22:33.262Z",
+            "modified": "2023-04-28T18:22:33.262Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"gamename\":\"adasdasda\",\n  \"release\":\"teszt\",\n  \"genre\":\"teszt\",\n  \"platform\":\"teszt\",\n  \"developer\":\"Test\",\n  \"description\":\"Test\",\n  \"image\":\"Test\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "686987c6-4d0d-46e1-9550-c0265d37868d",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "b8707c2b-2b48-4d0b-8d43-877d7d4669f5",
+            "name": "localhost:3000/games/7",
+            "url": "localhost:3000/games/7",
+            "method": "DELETE",
+            "sortNum": 130000,
+            "created": "2023-04-28T18:23:02.764Z",
+            "modified": "2023-04-28T18:23:02.764Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"teszt\",\n  \"gamename\":\"teszt\",\n  \"time\":\"teszt\",\n  \"platform\":\"teszt\",\n  \"difficulty\":\"teszt\",\n  \"youtubelink\":\"teszt\",\n  \"verif\":1\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "16c56ce4-2adc-4d8b-ae2d-60538dda23ba",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "adbb1738-b927-4ea2-b14d-7434a8e75cd5",
+            "name": "localhost:3000/news",
+            "url": "localhost:3000/news/11",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2023-04-28T18:23:40.948Z",
+            "modified": "2023-04-28T18:23:40.948Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"gamename\":\"asdadasdad\",\n  \"title\":\"Test\",\n  \"content\":\"Test\",\n  \"source\":\"Test\",\n  \"date\":\"0000-00-00\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f937a55e-c9f6-4110-a904-5c02b3ddf086",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "adbb1738-b927-4ea2-b14d-7434a8e75cd5",
+            "name": "localhost:3000/news",
+            "url": "localhost:3000/news/11",
+            "method": "PATCH",
+            "sortNum": 150000,
+            "created": "2023-04-28T18:23:59.638Z",
+            "modified": "2023-04-28T18:23:59.638Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"gamename\":\"asdadasdad\",\n  \"title\":\"asdadasdad\",\n  \"content\":\"asdadasdad\",\n  \"source\":\"asdadasdad\",\n  \"date\":\"0000-00-00\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d6785ee8-e7c6-4347-8ea0-7c79290f379b",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "b8707c2b-2b48-4d0b-8d43-877d7d4669f5",
+            "name": "localhost:3000/news",
+            "url": "localhost:3000/news/11",
+            "method": "DELETE",
+            "sortNum": 160000,
+            "created": "2023-04-28T18:24:08.634Z",
+            "modified": "2023-04-28T18:24:08.634Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"gamename\":\"asdadasdad\",\n  \"title\":\"asdadasdad\",\n  \"content\":\"asdadasdad\",\n  \"source\":\"asdadasdad\",\n  \"date\":\"0000-00-00\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "16b57409-7c34-49f3-9a7c-5c80b41a9999",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "adbb1738-b927-4ea2-b14d-7434a8e75cd5",
+            "name": "localhost:3000/accounts",
+            "url": "localhost:3000/accounts/6",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2023-04-28T18:25:34.357Z",
+            "modified": "2023-04-28T18:25:34.357Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"333333\",\n  \"email\":\"333333@gmail.com\",\n  \"password\":\"TestTest\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3b602dbc-20e4-4889-81f6-4fddb7650031",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "adbb1738-b927-4ea2-b14d-7434a8e75cd5",
+            "name": "localhost:3000/accounts",
+            "url": "localhost:3000/accounts/6",
+            "method": "PATCH",
+            "sortNum": 180000,
+            "created": "2023-04-28T18:25:51.502Z",
+            "modified": "2023-04-28T18:25:51.502Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"444444\",\n  \"email\":\"44444@gmail.com\",\n  \"password\":\"TestTest\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7af8c1bd-bc75-4326-9a9a-53fddb51918a",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "9ca77f44-4bf0-4fb9-a1ad-b85699284586",
+            "name": "localhost:3000/news",
+            "url": "localhost:3000/news/6",
+            "method": "GET",
+            "sortNum": 190000,
+            "created": "2023-04-28T18:28:50.346Z",
+            "modified": "2023-04-28T18:28:50.346Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "25a92ea2-4c0e-417c-bf1b-256c4344948f",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "9ca77f44-4bf0-4fb9-a1ad-b85699284586",
+            "name": "localhost:3000/news",
+            "url": "localhost:3000/records/3",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2023-04-28T18:29:04.910Z",
+            "modified": "2023-04-28T18:29:04.910Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f9005fe6-c738-43c8-8a78-5e0ce1eaaec0",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "9ca77f44-4bf0-4fb9-a1ad-b85699284586",
+            "name": "localhost:3000/news",
+            "url": "localhost:3000/games/1",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2023-04-28T18:29:20.446Z",
+            "modified": "2023-04-28T18:29:20.446Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "97f94a59-a5a3-4112-80fc-76336648ccee",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "9ca77f44-4bf0-4fb9-a1ad-b85699284586",
+            "name": "localhost:3000/news",
+            "url": "localhost:3000/accounts/3",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2023-04-28T18:29:48.082Z",
+            "modified": "2023-04-28T18:29:48.082Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "573aec53-5eec-4458-a4ed-cb3f3a665d84",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "dfcb0e38-cfa8-4351-9e22-2df40e626c93",
+            "name": "localhost:3000/records/7",
+            "url": "localhost:3000/auth/login",
+            "method": "POST",
+            "sortNum": 230000,
+            "created": "2023-04-28T18:31:44.034Z",
+            "modified": "2023-04-28T18:31:44.034Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n\"email\":\"Test00@gmail.com\",\n\"password\":\"TestTest\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3b14eeeb-6060-4d14-89c2-da4e27aa059e",
+            "colId": "ab4b6751-f3c5-4158-b06c-7d3cdd88276c",
+            "containerId": "b8707c2b-2b48-4d0b-8d43-877d7d4669f5",
+            "name": "localhost:3000/records/7",
+            "url": "localhost:3000/auth/logout",
+            "method": "DELETE",
+            "sortNum": 240000,
+            "created": "2023-04-28T18:32:19.154Z",
+            "modified": "2023-04-28T18:32:19.154Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n\"email\":\"Test00@gmail.com\",\n\"password\":\"TestTest\"\n  \n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "7d872825bc97185be1d415631f1f577bc3f74fb359e5fbd585e8ef8a2972e37f"
+            },
+            "tests": []
+        }
+    ]
+}
