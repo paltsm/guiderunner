@@ -1,8 +1,15 @@
 # GuideRunner
 
+A GuideRunner egy játék híreket és speedrunokat összesítő projekt, 
+ahol a felhasználó hozzáadhatja saját eredményeit, 
+illetve az általunk felrakott útmutató segítségével képes javítani az idején. 
+
+A projekt kitalálói és készítői: Deli Gábor és Palotás Mihály.
+
+
 # Leírás:
 
-Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmazás dokumentálását hivatott bemutatni.
+Ez a dokumentáció egy NestJS-en alapuló, TypeScripten elkészített alkalmazás dokumentálását hivatott bemutatni.
 
 
 ## Előfeltételek:
@@ -11,23 +18,26 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
   
 ##### Az alábbi parancsokat PowerShellba vagy Visual Studio Code Terminal-ba írjuk be.
 
+
 ###### A parancs letölti a legújabb nestjs cli-t, amely lehetővéteszi hogy létrehozzuk a  nestjs projektet.
       npm i -g @nestjs/cli   
-###### A parancs létrehozza a nestjs mappádat a szükséges fájlokkal.
+      
+      
+###### A parancs létrehozza a nestjs mappát a szükséges fájlokkal.
 ###### A package mangernel pedig válasszuk az 'npm'-et.
     nest new projekted_neve
 
 
-
-###### A parancs letölti azta csomagot amely lehetővé teszi az SQL adatbázissal való integrációt.
+###### A parancs letölti azt a csomagot, amely lehetővé teszi az SQL adatbázissal való integrációt.
     npm install --save @nestjs/typeorm typeorm mysql2
     
    
+###### Egy egyszerű plugin az osztálytranszformátorhoz és osztályellenőrzőhöz, amely ezeket egy programozóbarát API-ban egyesíti.
+    npm i --save class-validator class-transformer
    
    
-   
-#### A következő parancsok az alkalmazás hitelesítést fogja segíteni:
-   ###### Ez a modul lehetővé teszi a HTTP-kérések hitelesítését vivőjogkivonatokkal
+#### A következő parancsok az alkalmazás hitelesítését fogja segíteni:
+   ###### Ez a modul lehetővé teszi a HTTP-kérések hitelesítését vivőjogkivonatokkal.
     npm i --save  passport passport-http-bearer
     
    ###### Ez a modul lehetővé teszi a felhasználónévvel és jelszóval történő hitelesítést.
@@ -52,6 +62,7 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
     
 # Egységtesztek futtatása:  
     npm run test
+    
 ##### Tesztesetek a tests/thunderclient mappában találhatók
    
 # Végpontok:
@@ -261,17 +272,29 @@ Egy NestJS-en alapuló akalmazás, amely egy TypeScripten elkészített alkalmaz
 | password | Regisztrációhoz vagy bejelentkezéshez használt jelszó  | string |
 | platform | A megjelenítendő Game vagy Speedrun hozzáadásának platformja(iii) | string |
 | release  | A megjelenített játék megjelenésének ideje | number |
-| source  | A News oldal hírének forrása  | string |
+| source  | A News oldal hírének forrása  | string(iv) |
 | time | Speedrun hozzáadásához használt idő | string |
-| title  | A News(iv) oldal fő szalagcíme | string |
+| title  | A News(v) oldal fő szalagcíme | string |
 | username | Regisztrációhoz vagy Speedrun hozzáadásához használt speciális felhasználónév | string |
 | youtubelink | Felhasználó által elvégzett Speedrun igazoló videója | string |
 
   * 1. felhasználói oldal, Speedrun = egy videojáték vagy egy játékszint lehető leggyorsabb befejezése
   * 2. fejlesztői oldal,felhasználó nem szerkesztheti
   * 3. platform = a játék ezekre az eszözökre jelent meg
-  * 4. híreket megjelenítő oldal
+  * 4. bármely karaktersorozat, amelyet egy script szó szerint értelmez
+  * 5. híreket megjelenítő oldal
   
+### Felhasznált class-validator-ok:
+
+| Validátorok | Leírás |
+| ------------- | ------------- |
+| IsNotEmpty  | A mező nem maradhat üresen | 
+| IsString  | A mezőnek stringnek kell lennie("") |
+| IsUrl  | A mezőnek url-nek kell lennie |
+| MinLength  | A mező minimum karaktertartalma  |
+| MaxLength  | A mező maximum karaktertartalma  |
+
+
 
 
 
