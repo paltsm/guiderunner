@@ -2,16 +2,25 @@ import { Body, Controller, Delete, Get, Param, ParseIntPipe, Patch, Post, Put } 
 import { NewsService } from '../service/news.service';
 import { CreateNewsDto } from 'src/news/dtos/createnews.dto';
 import { UpdateNewsDto } from '../dtos/updatenews.dto';
+import { DataSource } from 'typeorm';
+import News from 'src/typeorm/entities/news.entity';
 
 @Controller('news')
 export class NewsController {
-    constructor(private newsService:NewsService){
+    constructor(private newsService:NewsService,private dataSource: DataSource){
     }
     @Get()
     async getAllNews(){
         const news = await this.newsService.findAllNews();
         return news;
     }
+	@Get(':id')
+	async getNews(@Param() id:number){
+		console.log(id)
+		const news= await this.dataSource.getRepository(News).findOne({where:{id:3}})
+		console.log(news)
+		return news
+	}
     @Post()
     createNewNews(@Body() createNewsDto: CreateNewsDto ){
         return this.newsService.createNews(createNewsDto);
