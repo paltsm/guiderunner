@@ -58,11 +58,33 @@ class Record extends Component<{},State>{
 			records: data.records
 		})
 	}
-	reject(){
-		return null
+	reject=async(id:number)=>{
+		const data={
+			"verif":true
+		}
+		const response =await fetch(`http://localhost:3000/records/${id}`,{
+			method:"DELETE",
+			headers:{
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(data)
+		})
+		console.log(response.status)
+		window.location.reload()
 	}
-	accept(){
-		return null
+	accept=async(id:number)=>{
+		const data={
+			"verif":true
+		}
+		const response =await fetch(`http://localhost:3000/records/${id}`,{
+			method:"PATCH",
+			headers:{
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(data)
+		})
+		console.log(response.status)
+		window.location.reload()
 	}
 	
 	render(){
@@ -84,10 +106,10 @@ class Record extends Component<{},State>{
 							<div>{r.username+` (${r.gamename})`}</div>
 							<div>{r.time+` (${r.platform})`}</div>
 						</summary>
-						<iframe width="560" height="315" src={"https://www.youtube.com/embed/"+r.youtubelink.split("/")[3]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+						<iframe className='youtubeembed' src={"https://www.youtube.com/embed/"+r.youtubelink.split("/")[3]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 						<div className="buttons">
-							<button className='acceptbutton rbutton' onClick={this.accept}>✔</button>
-							<button className='rejectbutton rbutton' onClick={this.reject}>❌</button>
+							<button className='acceptbutton rbutton' onClick={()=>this.accept(r.id)}>✔</button>
+							<button className='rejectbutton rbutton' onClick={()=>this.reject(r.id)}>❌</button>
 						</div>
 					</details>
 				)}</>

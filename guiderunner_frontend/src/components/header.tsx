@@ -84,13 +84,13 @@ export default class Header extends Component<{},State>{
 			<header id='header'>
 				<nav id='navbar'>
 					<Link to="/">home</Link>
-					<Link to="/games">games</Link>
 					<Link to="/news">news</Link>
 					{this.state.role=="admin" ?(
 						<Link to="/validate">validations</Link>
 					):(
 						<></>
 					)}
+					<Link to="/about">about</Link>
 				</nav>
 				<div id='inorout'>
 				{localStorage.getItem('token')===''||localStorage.getItem('token')===null ? (

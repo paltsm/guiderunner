@@ -45,3 +45,8 @@ iframe{
 .acceptbutton{
 	color: rgb(9, 197, 9);
 }
+.youtubeembed{
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 16/9;
+}

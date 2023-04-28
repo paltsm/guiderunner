@@ -77,7 +77,7 @@ class News extends Component<{},State>{
 				<>
 				{this.state.news.map((r)=>
 					<div className='newscard'>
-						<Link to={`/news/${r.id}`} className='cardtitle'>{r.title}</Link>
+						<Link to={`/news/${r.id}`} className='cardtitle' >{r.title} </Link>
 						
 						<div className='gamenameanddate'>
 							<div>{r.gamename}</div>
@@ -106,7 +106,6 @@ class News extends Component<{},State>{
 						<div className='newscontent'>{this.state.content}</div>
 						<a href={this.state.source} target='_blank' className='newssource'>{this.state.source}</a>
 					</div>
-					
 			</main>
 			</>)
 		}
