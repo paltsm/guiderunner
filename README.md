@@ -293,6 +293,11 @@ Ez a dokumentáció egy NestJS-en alapuló, TypeScripten elkészített alkalmaz�
 | MinLength  | A mező minimum karaktertartalma  |
 | MaxLength  | A mező maximum karaktertartalma  |
 
+A leírásokhoz felhasznált források:
+#### https://docs.nestjs.com/techniques/validation
+#### https://www.w3schools.com/tags/ref_httpmethods.asp
+#### https://www.npmjs.com/package/@nestjs/typeorm
+
 
 ### A projekt kitalálói és fejlesztői: 
 #### Deli Gábor https://github.com/G4B3E 
