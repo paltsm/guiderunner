@@ -11,7 +11,7 @@ export default class News {
   @Column()
   title: string;
 
-  @Column()
+  @Column({length:300})
   content: string;
 
   @Column()

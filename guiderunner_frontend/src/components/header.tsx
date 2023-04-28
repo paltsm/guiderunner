@@ -23,7 +23,8 @@ export default class Header extends Component<{},State>{
 	}
 
 	getuser = async()=>{
-		if(localStorage.getItem('token')!==''||localStorage.getItem('token')!==null){
+		console.log(localStorage.getItem('token'))
+		if(localStorage.getItem('token')!==null){
 			let response=await fetch("http://localhost:3000/auth/finduser",{
 				method:'POST',
 				headers:{
@@ -37,9 +38,15 @@ export default class Header extends Component<{},State>{
 			const data=await response.json()
 			return data
 		}
+		else{
+			return null
+		}
 	}
 	changestate=async()=>{
 		let data=await this.getuser()
+		if(data==null){
+			return
+		}
 		this.setState({
 			id: data.id,
 			username: data.username,

@@ -50,6 +50,11 @@ class News extends Component<{},State>{
 		console.log(this.state.news)
 		return(<>
 		<main>
+			<>{window.location.pathname=='/news'||'/news/' ? (
+				console.log("nahhh")
+				):(
+					console.log(window.location.pathname)
+			)}
 			{this.state.news.map((r)=>
 				<div style={{background:'#aaaaaa20',margin:'0 0 0.5rem',padding:'0.5rem'}}>
 					<div style={{fontSize:'1.5rem',textDecoration:'dotted 1px black'}}>{r.title}</div>
@@ -58,7 +63,7 @@ class News extends Component<{},State>{
 					<div>{r.source}</div>
 					<div>{r.date}</div>
 				</div>
-			)}
+			)}</>
 		</main>
 		</>)
 	}
