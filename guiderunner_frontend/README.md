@@ -12,7 +12,14 @@ a mappába mész és beírod: npm start
 
 #oldalak
 
-
+| path | Leírás | Egyéb megjegyzések |
+| ------------- | ------------- | ------------- |
+| / | főoldal | nincs kész, lett volna sokkal több |
+| /user/:id | felhasználók profilja, ha be vagy jelentkezve, tudnál embereket követni |  |
+| /games/:id | játékok profilja, lehet követni és speedrun-okat látni az oldalon | lettek volna még hírek és útmutatók is |
+| /validate | ha egy admin vagy (azt kérni kell), akkor tudsz speedrun-okat igazolni/elutasítani |  |
+| /news | a legújabb hírek vannak itt, a címre nyomva elkülöníti az egy hírt | néha nem akar betölteni |
+| /about | itt lett volna emailcím és a csapatról szó | nincs kész X |
 
 ---
 
