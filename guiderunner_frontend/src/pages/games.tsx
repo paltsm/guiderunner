@@ -22,6 +22,15 @@ interface User{
 	token:string;
 	games:Games[]
 }
+interface Records{
+	id:number
+	username:string;
+	gamename:string;
+	time:string;
+	platform:string;
+	youtubelink:string;
+	verif:boolean;
+}
 
 interface State{
 	id:number
@@ -34,6 +43,7 @@ interface State{
 	image:string;
 	following:boolean;
 	user:User;
+	records:Records[]
 }
 class Game extends Component<{},State>{
 	constructor(props:{}){
@@ -48,7 +58,8 @@ class Game extends Component<{},State>{
 			description:"asd",
 			image:"",
 			following:false,
-			user:{"id":0,"username":"","email":"","token":window.localStorage.getItem("token")||'',"role":"user","games":[]}
+			user:{"id":0,"username":"","email":"","token":window.localStorage.getItem("token")||'',"role":"user","games":[]},
+			records:[]
 		}
 		this.everything()
 	}
@@ -74,6 +85,17 @@ class Game extends Component<{},State>{
 				user: { "id": isuserlogin.id, "username": isuserlogin.username, "email": isuserlogin.email, "token": window.localStorage.getItem("token")||'', "role": isuserlogin.role, "games": usergame }
 			})
 		}
+
+		const records=await fetch(`http://localhost:3000/records`)
+		let data=await records.json()
+		let filtered=data.records.filter((record: any)=>record.gamename==pageinfo[0].gamename)
+		console.log(filtered)
+		this.setState({
+			records: filtered
+		})
+
+
+
 		this.setState({
 			id:pageinfo[0].id,
 			gamename:pageinfo[0].gamename,
@@ -205,6 +227,24 @@ class Game extends Component<{},State>{
 					</div>
 
 				</div>
+			</div>
+			<div className="records">
+			<h2>records</h2>
+				<>
+				{this.state.records.map((r)=>
+					<details className={`recordcard ${r.verif==true?(
+						"veriftrue"
+						):(
+						"veriffalse"
+						)}`}>
+
+						<summary>
+							<div>{r.username+` (${r.gamename})`}</div>
+							<div>{r.time+` (${r.platform})`}</div>
+						</summary>
+						<iframe className='youtubeembed' src={"https://www.youtube.com/embed/"+r.youtubelink.split("/")[3]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+					</details>
+				)}</>
 			</div>
 		</main>
 		</>)

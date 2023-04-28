@@ -103,6 +103,7 @@ class Main extends Component<{},State>{
 				})}
 					<button className="button next" onClick={this.scrollingright}>&gt;</button>
 				</div>
+			<h2 style={{margin:" 0 0 1rem"}}>some news</h2>
 		</main></>
 	
 	}

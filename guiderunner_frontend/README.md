@@ -1,3 +1,21 @@
+# GuideRunner Frontend
+
+ez a webes felület arra szolgál hogy egyszerűen figyelemmel kövesd kedvenc játékaidat, legyen szó hírekről vagy speedrun-okról.
+
+
+# Telepítés
+    npm i
+
+## indítás
+
+a mappába mész és beírod: npm start
+
+#oldalak
+
+
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
