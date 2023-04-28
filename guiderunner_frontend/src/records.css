@@ -1,0 +1,47 @@
+.recordcard{
+	background:#aaaaaa20;
+	margin:0 0 0.5rem;
+	padding:0.5rem;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+h2 ~ .recordcard{
+	margin-top: 1rem;
+}
+.recordcard>summary{
+	font-size: 1.3rem;
+}
+.recordcard >summary{
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	user-select: none;
+}
+.veriftrue{
+	background-color: #38750250;
+}
+.veriffalse{
+	background-color: #cf171750;
+}
+.buttons{
+	display: flex;
+	gap: 1rem;
+}
+.rbutton{
+	margin: 1rem;
+	width: 50%;
+	height: 3rem;
+	background-color: transparent;
+	color: white;
+	border: none;
+	font-size: 1.5rem;
+	background-color: #ffffff40;
+	border-radius: 0.4rem;
+}
+iframe{
+	margin: auto;
+}
+.acceptbutton{
+	color: rgb(9, 197, 9);
+}

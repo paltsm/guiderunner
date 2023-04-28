@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 interface State {
 	email: string;
@@ -97,12 +98,11 @@ class Login extends Component <{}, State> {
 						<section id="buttonsection">
 							<button type="button" id="button" onClick={this.handleLogin}>login</button>
 						</section>
+						<section id="buttonsection">
+							<Link to={"/register"}>register</Link>
+						</section>
 
 						<p>{this.state.message}</p>
-
-						{/* <section id="forgotbuttonsection">
-							<button onClick={this.forgotpasswordemail}>forgot password?</button>
-						</section> */}
 					</form>
 				) : (
 					<p>You are alredy logged in</p>

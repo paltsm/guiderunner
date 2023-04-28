@@ -178,6 +178,7 @@ class Game extends Component<{},State>{
 	}
 	
 	render(){
+		document.title=this.state.gamename
 		console.log(this.state.user.id)
 		return(<>
 		<main>
