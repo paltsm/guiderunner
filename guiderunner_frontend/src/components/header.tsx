@@ -7,6 +7,7 @@ interface State{
 	username:string;
 	email:string;
 	token: string;
+	role:string;
 }
 
 export default class Header extends Component<{},State>{
@@ -16,6 +17,7 @@ export default class Header extends Component<{},State>{
 			id:0,
 			username:'',
 			email:'',
+			role:'user',
 			token: window.localStorage.getItem("token")||''
 		}
 		this.changestate()
@@ -50,7 +52,8 @@ export default class Header extends Component<{},State>{
 		this.setState({
 			id: data.id,
 			username: data.username,
-			email: data.email
+			email: data.email,
+			role:data.role
 		})
 
 	}
@@ -83,6 +86,11 @@ export default class Header extends Component<{},State>{
 					<Link to="/">home</Link>
 					<Link to="/games">games</Link>
 					<Link to="/news">news</Link>
+					{this.state.role=="admin" ?(
+						<Link to="/validate">validations</Link>
+					):(
+						<></>
+					)}
 				</nav>
 				<div id='inorout'>
 				{localStorage.getItem('token')===''||localStorage.getItem('token')===null ? (

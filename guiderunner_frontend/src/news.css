@@ -1,0 +1,29 @@
+.newscard{
+	background:#aaaaaa20;
+	margin:0 0 0.5rem;
+	padding:0.5rem;
+}
+.cardtitle{
+	font-size:1.5rem;
+	text-decoration:underline dashed 1px #ed9b00;
+}
+.gamenameanddate{
+	margin: 0.5rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+.newsdate{
+	color: #ffffff40
+}
+.newscontent{
+	margin: 0.5rem 0;
+}
+.newssource{
+	font-size: 0.8rem;
+	color: #ed9b00a0;
+}
+.titleandshare{
+	padding: 0.5rem 0;
+	display: flex;
+	justify-content: space-between;
+}

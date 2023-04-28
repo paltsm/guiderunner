@@ -6,11 +6,14 @@ import './app.css';
 import './header.css';
 import './users.css';
 import './game.css'
+import './news.css'
+import './records.css'
 import Login from "./pages/login";
 import Header from "./components/header";
 import Users from "./pages/users";
 import News from "./pages/news";
 import Game from "./pages/games";
+import Record from "./pages/records";
 
 class App extends Component<{}>{
 	render(){
@@ -24,6 +27,7 @@ class App extends Component<{}>{
 				<Route path="/news/:id" element={<News></News>}/>
 				<Route path="/register" element={<Register></Register>}/>
 				<Route path="/login" element={<Login></Login>}/>
+				<Route path="/validate" element={<Record></Record>}/>
 			</Routes>
 			</>)
 	}
