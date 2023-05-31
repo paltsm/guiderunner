@@ -38,10 +38,10 @@ CREATE TABLE `accounts` (
 -- A tábla adatainak kiíratása `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `username`, `email`, `password`) VALUES
-(1, 'testing', 'testing@gmail.com', '$2b$10$hfxjb17FDRdqnWtvkhy3Le3.Lj9Zz280.22Ylz7ztEj6pi1M3/wTm'),
-(2, 'user01', 'user01@gmail.com', '$2b$10$rKZXiOHZ3o.Rl2MbniA9Lehul1tjVfLaJ/toBn8GGCG8yJzZGJnVy'),
-(3, 'user02', 'user02@gmail.com', '$2b$10$aJXiOBoKXRTyuJ8RRtUv/OheXqeoHQze4rxMEu/yXu5izSPoDSVKW');
+INSERT INTO `accounts` (`id`, `username`, `email`, `password`,`role`) VALUES
+(1, 'testing', 'testing@gmail.com', '$2b$10$hfxjb17FDRdqnWtvkhy3Le3.Lj9Zz280.22Ylz7ztEj6pi1M3/wTm','user'),
+(2, 'user01', 'user01@gmail.com', '$2b$10$rKZXiOHZ3o.Rl2MbniA9Lehul1tjVfLaJ/toBn8GGCG8yJzZGJnVy','user'),
+(3, 'user02', 'user02@gmail.com', '$2b$10$aJXiOBoKXRTyuJ8RRtUv/OheXqeoHQze4rxMEu/yXu5izSPoDSVKW','user');
 
 --
 -- Indexek a kiírt táblákhoz

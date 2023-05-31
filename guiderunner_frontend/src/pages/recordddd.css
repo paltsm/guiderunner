@@ -1,0 +1,14 @@
+select{
+	width: 100%;
+	background-color: #fff1;
+	border: 1px white solid;
+	padding: 0.25rem;
+	border-radius: 0.2rem;
+	color: white;
+}
+option{
+	background-color: #093649;
+}
+option:hover{
+	background-color: yellow;
+}

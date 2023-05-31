@@ -85,6 +85,8 @@ export default class Header extends Component<{},State>{
 				<nav id='navbar'>
 					<Link to="/">home</Link>
 					<Link to="/news">news</Link>
+					<Link to="/games">games</Link>
+					<Link to="/add-record">add record</Link>
 					{this.state.role=="admin" ?(
 						<Link to="/validate">validations</Link>
 					):(

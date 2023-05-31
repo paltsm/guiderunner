@@ -1,0 +1,32 @@
+.devcard{
+	text-align: center;
+	background-color: #ffffff08;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	gap: 1rem;
+}
+.devcard * {
+	/* margin: 1rem; */
+}
+.devcard img{
+	width: 30%;
+}
+.aboutcontain{
+	display: flex;
+	justify-content: space-evenly;
+}
+h2{
+	padding: 1rem;
+}
+.projectcard{
+	margin: 1rem;
+}
+footer{
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 2rem);
+	margin: 1rem;
+}

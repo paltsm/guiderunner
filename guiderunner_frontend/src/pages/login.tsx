@@ -86,7 +86,7 @@ class Login extends Component <{}, State> {
 			<main className="main">
 				<h2>login</h2>
 				{localStorage.getItem('token')===''||localStorage.getItem('token')===null ? (
-					<form className="rgblog">
+					<form className="form">
 						<section id="emailsection">
 							<input type="text" placeholder="email" className="input" id="emailinput" value={this.state.email} required onChange={e => this.setState({email: e.currentTarget.value})}/>
 						</section>
@@ -96,9 +96,7 @@ class Login extends Component <{}, State> {
 						</section>
 
 						<section id="buttonsection">
-							<button type="button" id="button" onClick={this.handleLogin}>login</button>
-						</section>
-						<section id="buttonsection">
+							<button type="button" id="rbutton" onClick={this.handleLogin}>login</button>
 							<Link to={"/register"}>register</Link>
 						</section>
 

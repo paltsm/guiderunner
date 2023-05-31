@@ -134,24 +134,6 @@ class Game extends Component<{},State>{
 		return usergames
 	}
 	checkfollow=async()=>{
-		// let followinggames={
-		// 	user:this.state.user.id,
-		// 	fgame:parseInt(window.location.pathname.split("/")[window.location.pathname.split("/").length-1])
-		// }
-		// console.log(this.state.user.games)
-		// for(let game of this.state.user.games){
-		// 	console.log(game)
-		// 	if(game.id===followinggames.fgame){
-		// 		document.getElementById("followbutton")!.innerText="following"
-				
-		// 		return true
-		// 	}
-		// 	else{
-		// 		console.log("hulye")
-		// 		continue
-		// 	}
-		// }
-		// return false
 		if(this.state.following==false && this.state.user.token!==''){
 			console.log("follow")
 			
@@ -242,7 +224,11 @@ class Game extends Component<{},State>{
 							<div>{r.username+` (${r.gamename})`}</div>
 							<div>{r.time+` (${r.platform})`}</div>
 						</summary>
-						<iframe className='youtubeembed' src={"https://www.youtube.com/embed/"+r.youtubelink.split("/")[3]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+						{r.youtubelink.includes("=")?(
+							<iframe className='youtubeembed' src={"https://www.youtube.com/embed/"+r.youtubelink.split("=")[1]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+						):(
+							<iframe className='youtubeembed' src={"https://www.youtube.com/embed/"+r.youtubelink.split("/")[3]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+						)}
 					</details>
 				)}</>
 			</div>

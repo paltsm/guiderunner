@@ -106,7 +106,11 @@ class Record extends Component<{},State>{
 							<div>{r.username+` (${r.gamename})`}</div>
 							<div>{r.time+` (${r.platform})`}</div>
 						</summary>
-						<iframe className='youtubeembed' src={"https://www.youtube.com/embed/"+r.youtubelink.split("/")[3]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+						{r.youtubelink.includes("=")?(
+							<iframe className='youtubeembed' src={"https://www.youtube.com/embed/"+r.youtubelink.split("=")[1]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+						):(
+							<iframe className='youtubeembed' src={"https://www.youtube.com/embed/"+r.youtubelink.split("/")[3]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+						)}
 						<div className="buttons">
 							<button className='acceptbutton rbutton' onClick={()=>this.accept(r.id)}>✔</button>
 							<button className='rejectbutton rbutton' onClick={()=>this.reject(r.id)}>❌</button>

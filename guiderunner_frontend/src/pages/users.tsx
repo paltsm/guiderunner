@@ -137,41 +137,50 @@ class Users extends Component<{},State>{
 	}
 	
 	render(){
+		document.title= `${this.state.username}`
+		console.log("gooddd"+this.state.games.length)
 		return (<>
 			<main className='main'>
 				<div className='username'>
 					<h2>{this.state.username}</h2>
-
-					{this.state.user.id==0 ? (
-						<Link id='followbutton' to="/login" onClick={this.checkfollow}>follow</Link>
-					) : (	
-						this.state.user.id==this.state.id ? (
-							// <div id='settingsbutton'>settings</div>
-							<></>
-						) : (
-							<button id='followbutton' onClick={this.checkfollow}>follow</button>
-						)
-					)}
-
 				</div>
 				{this.state.games.length==0?(
 					<></>
 				):(
-
-				<div id='gamesslide'>
-				<button className="button prev" onClick={this.scrollingleft}>&lt;</button>
-					{this.state.games.map((game)=>{
-					return <Link to={`/games/${game.id}`} className='game' style={{backgroundImage:`url(${game.image})`,backgroundSize:"cover"}}>
-						<div>
-							{game.gamename}
+					this.state.games.length<4?(
+						
+						<div id='containgames'>
+							<div id='gamesslide'>
+								{this.state.games.map((game)=>{
+									return <Link to={`/games/${game.id}`} className='game' style={{backgroundImage:`url(${game.image})`,backgroundSize:"cover"}}>
+										<div>
+											{game.gamename}
+										</div>
+										<div>
+											{game.release}
+										</div>
+										</Link>
+								})}
+							</div>
 						</div>
-						<div>
-							{game.release}
+					):(
+						<div id='containgames'>
+						<button className="button prev" onClick={this.scrollingleft}>&lt;</button>
+						<div id='gamesslide'>
+							{this.state.games.map((game)=>{
+								return <Link to={`/games/${game.id}`} className='game' style={{backgroundImage:`url(${game.image})`,backgroundSize:"cover"}}>
+									<div>
+										{game.gamename}
+									</div>
+									<div>
+										{game.release}
+									</div>
+									</Link>
+							})}
 						</div>
-						</Link>
-				})}
-					<button className="button next" onClick={this.scrollingright}>&gt;</button>
-				</div>
+						<button className="button next" onClick={this.scrollingright}>&gt;</button>
+					</div>
+					)
 				)}
 			</main>
 		</>)

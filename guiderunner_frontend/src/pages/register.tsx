@@ -1,5 +1,6 @@
 import {Component} from "react";
 import {Link} from "react-router-dom";
+import "./register.css"
 
 interface State {
 	email: string;
@@ -102,11 +103,11 @@ class Register extends Component <{}, State> {
 						</section>
 
 						<section id="buttonsection">
-							<button type="button" id="button" onClick={this.register}>register</button>
+							<button type="button" id="rbutton" onClick={this.register}>register</button>
+							<Link className='gologin' to='/login'>login</Link>
 						</section>
 
 						<p id="message">{this.state.message}</p>
-						<Link className='gologin' to='/login'>login</Link>
 					</form>
 					) : (
 					<p>You are alredy logged in</p>
